@@ -17,3 +17,6 @@ export async function POST(req: NextRequest) {
   if (!video_id) return NextResponse.json({ error: "video_id required" }, { status: 400 });
   db.prepare(
     "INSERT OR REPLACE INTO history (video_id, watched_at) VALUES (?, datetime('now'))"
+  ).run(video_id);
+  return NextResponse.json({ ok: true });
+}
