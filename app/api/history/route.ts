@@ -19,3 +19,8 @@ export async function POST(req: NextRequest) {
   ).run(video_id);
   return NextResponse.json({ ok: true });
 }
+
+export async function DELETE() {
+  db.prepare("DELETE FROM history").run();
+  return NextResponse.json({ ok: true });
+}
