@@ -7,3 +7,6 @@ export async function GET() {
       `SELECT v.*, h.watched_at FROM history h
        JOIN videos v ON v.id = h.video_id ORDER BY h.watched_at DESC LIMIT 200`
     )
+    .all();
+  return NextResponse.json(rows);
+}
