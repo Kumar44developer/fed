@@ -8,3 +8,6 @@ export async function GET() {
        JOIN subscriptions s ON s.username = v.username
        ORDER BY v.timestamp DESC`
     )
+    .all();
+  return NextResponse.json(rows);
+}
