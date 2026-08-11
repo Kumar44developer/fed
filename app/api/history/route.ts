@@ -10,3 +10,6 @@ export async function GET() {
     .all();
   return NextResponse.json(rows);
 }
+
+export async function POST(req: NextRequest) {
+  const { video_id } = await req.json();
