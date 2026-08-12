@@ -13,3 +13,8 @@ export async function GET(req: NextRequest) {
  try {
     const profile = await searchProfile(username);
     if (!profile) return NextResponse.json({ error: "Profile not found" }, { status: 404 });
+    return NextResponse.json(profile);
+  } catch (e) {
+    return NextResponse.json({ error: (e as Error).message }, { status: 500 });
+  }
+}
