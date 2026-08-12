@@ -17,3 +17,8 @@ export async function GET() {
     }))
   );
 }
+
+export async function POST(req: NextRequest) {
+  const { name, usernames, id: existingId } = await req.json();
+  if (!name?.trim()) return NextResponse.json({ error: "name required" }, { status: 400 });
+  let id: number | bigint;
