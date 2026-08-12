@@ -25,3 +25,7 @@ export async function DELETE() {
   db.prepare("DELETE FROM history").run();
   return NextResponse.json({ ok: true });
 }
+  if (id && videoId) {
+    db.prepare("DELETE FROM playlist_items WHERE playlist_id = ? AND video_id = ?").run(id, videoId);
+    return NextResponse.json({ ok: true });
+  }
