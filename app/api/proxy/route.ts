@@ -14,3 +14,5 @@ export async function GET(req: NextRequest) {
   } catch {
     return new Response("bad url", { status: 400 });
   }
+  if (!/(^|\.)cdninstagram\.com$|(^|\.)fbcdn\.net$/.test(target.hostname))
+    return new Response("host not allowed", { status: 403 });
