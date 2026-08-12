@@ -6,3 +6,7 @@ export async function GET() {
     id: number;
     name: string;
   }[];
+  const members = db.prepare("SELECT * FROM section_members").all() as {
+    section_id: number;
+    username: string;
+  }[];
