@@ -29,3 +29,8 @@ export async function DELETE() {
     db.prepare("DELETE FROM playlist_items WHERE playlist_id = ? AND video_id = ?").run(id, videoId);
     return NextResponse.json({ ok: true });
   }
+  if (!id) return NextResponse.json({ error: "id required" }, { status: 400 });
+  db.prepare("DELETE FROM playlists WHERE id = ?").run(id);
+  db.prepare("DELETE FROM playlist_items WHERE playlist_id = ?").run(id);
+  return NextResponse.json({ ok: true });
+}
