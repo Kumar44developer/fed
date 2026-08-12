@@ -31,4 +31,6 @@ export async function GET(req: NextRequest) {
     const v = upstream.headers.get(h);
     if (v) headers.set(h, v);
   }
-
+  headers.set("Cache-Control", "public, max-age=3600");
+  return new Response(upstream.body, { status: upstream.status, headers });
+}
