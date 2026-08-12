@@ -6,3 +6,7 @@ export async function GET(req: NextRequest) {
   const username = raw.trim().replace(/^@/, "").replace(/\s+/g, "").toLowerCase();
   if (!username) return NextResponse.json({ error: "username required" }, { status: 400 });
   if (!isValidUsername(username))
+    return NextResponse.json(
+      { error: "Invalid username. Use only letters, numbers, dots and underscores (no spaces)." },
+      { status: 400 }
+    );
