@@ -16,3 +16,7 @@ export async function GET(req: NextRequest) {
   }
   if (!/(^|\.)cdninstagram\.com$|(^|\.)fbcdn\.net$/.test(target.hostname))
     return new Response("host not allowed", { status: 403 });
+
+  const range = req.headers.get("range");
+  const upstream = await fetch(target.toString(), {
+    headers: {
