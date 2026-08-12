@@ -10,3 +10,6 @@ export async function GET(req: NextRequest) {
       { error: "Invalid username. Use only letters, numbers, dots and underscores (no spaces)." },
       { status: 400 }
     );
+ try {
+    const profile = await searchProfile(username);
+    if (!profile) return NextResponse.json({ error: "Profile not found" }, { status: 404 });
