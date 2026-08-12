@@ -25,3 +25,10 @@ export async function GET(req: NextRequest) {
       ...(range ? { Range: range } : {}),
     },
   });
+
+  const headers = new Headers();
+  for (const h of ["content-type", "content-length", "content-range", "accept-ranges"]) {
+    const v = upstream.headers.get(h);
+    if (v) headers.set(h, v);
+  }
+
