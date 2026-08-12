@@ -10,3 +10,10 @@ export async function GET() {
     section_id: number;
     username: string;
   }[];
+  return NextResponse.json(
+    sections.map((s) => ({
+      ...s,
+      usernames: members.filter((m) => m.section_id === s.id).map((m) => m.username),
+    }))
+  );
+}
