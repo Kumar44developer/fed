@@ -22,3 +22,6 @@ export async function POST(req: NextRequest) {
   const { name, usernames, id: existingId } = await req.json();
   if (!name?.trim()) return NextResponse.json({ error: "name required" }, { status: 400 });
   let id: number | bigint;
+  if (existingId && existingId !== -1) {
+    db.prepare("UPDATE sections SET name = ? WHERE id = ?").run(name.trim(), existingId);
+    id = existingId;
