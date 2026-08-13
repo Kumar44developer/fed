@@ -12,3 +12,5 @@ export async function GET(req: NextRequest) {
   const cached = db
     .prepare("SELECT * FROM videos WHERE username = ? ORDER BY timestamp DESC")
     .all(username);
+
+  if (cached.length && !refresh) return NextResponse.json(cached);
