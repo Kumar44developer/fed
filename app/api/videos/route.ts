@@ -14,3 +14,6 @@ export async function GET(req: NextRequest) {
     .all(username);
 
   if (cached.length && !refresh) return NextResponse.json(cached);
+
+  try {
+    const videos = await fetchVideos(username);
