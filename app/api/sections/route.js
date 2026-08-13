@@ -40,3 +40,8 @@ export async function POST(req: NextRequest) {
   }
   return NextResponse.json({ ok: true, id });
 }
+
+
+export async function DELETE(req: NextRequest) {
+  const id = req.nextUrl.searchParams.get("id");
+  if (!id) return NextResponse.json({ error: "id required" }, { status: 400 });
