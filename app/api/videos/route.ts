@@ -7,3 +7,8 @@ export async function GET(req: NextRequest) {
   const refresh = req.nextUrl.searchParams.get("refresh") === "1";
   if (!username || !isValidUsername(username))
     return NextResponse.json({ error: "valid username required" }, { status: 400 });
+
+
+  const cached = db
+    .prepare("SELECT * FROM videos WHERE username = ? ORDER BY timestamp DESC")
+    .all(username);
