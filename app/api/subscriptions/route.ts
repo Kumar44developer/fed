@@ -11,3 +11,5 @@ export async function GET() {
   export async function POST(req: NextRequest) {
     const { username, full_name, profile_pic } = await req.json();
     if (!username || !isValidUsername(username))
+  db.prepare(
+    "INSERT OR IGNORE INTO subscriptions (username, full_name, profile_pic) VALUES (?, ?, ?)"
