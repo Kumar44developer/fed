@@ -32,3 +32,6 @@ export async function GET(req: NextRequest) {
     return NextResponse.json(rows);
   } catch (e) {
     if (cached.length) return NextResponse.json(cached);
+    return NextResponse.json({ error: (e as Error).message }, { status: 500 });
+  }
+}
