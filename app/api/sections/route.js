@@ -27,3 +27,7 @@ export async function POST(req: NextRequest) {
     id = existingId;
   } else {
     const info = db.prepare("INSERT OR IGNORE INTO sections (name) VALUES (?)").run(name.trim());
+    id =
+      (info.lastInsertRowid as number) ||
+      (db.prepare("SELECT id FROM sections WHERE name = ?").get(name.trim()) as { id: number }).id;
+  }
