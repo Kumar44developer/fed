@@ -26,3 +26,6 @@ export default function LoginPage() {
         if (error) throw error;
         setMsg("Account created! Check your email to confirm, then log in.");
         setMode("login");
+      } else {
+        const { error } = await supabase.auth.signInWithPassword({ email, password });
+        if (error) throw error;
