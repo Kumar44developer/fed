@@ -28,3 +28,5 @@ export async function GET(req: NextRequest) {
     tx();
     const rows = db
       .prepare("SELECT * FROM videos WHERE username = ? ORDER BY timestamp DESC")
+      .all(username);
+    return NextResponse.json(rows);
