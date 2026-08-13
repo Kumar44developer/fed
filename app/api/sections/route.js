@@ -25,3 +25,5 @@ export async function POST(req: NextRequest) {
   if (existingId && existingId !== -1) {
     db.prepare("UPDATE sections SET name = ? WHERE id = ?").run(name.trim(), existingId);
     id = existingId;
+  } else {
+    const info = db.prepare("INSERT OR IGNORE INTO sections (name) VALUES (?)").run(name.trim());
