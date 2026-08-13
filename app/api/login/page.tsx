@@ -12,3 +12,8 @@ export default function LoginPage() {
   const [msg, setMsg] = useState("");
   const [err, setErr] = useState("");
   const router = useRouter();
+
+
+  const submit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setBusy(true);
