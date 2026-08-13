@@ -38,3 +38,7 @@ export default function LoginPage() {
       setBusy(false);
     }
   };
+
+  return (
+    <div className="auth-page">
+      <div className="auth-card">
