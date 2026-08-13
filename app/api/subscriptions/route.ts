@@ -16,3 +16,7 @@ export async function GET() {
   ).run(username, full_name ?? "", profile_pic ?? "");
   return NextResponse.json({ ok: true });
 }
+
+export async function DELETE(req: NextRequest) {
+  const username = req.nextUrl.searchParams.get("username");
+  if (!username) return NextResponse.json({ error: "username required" }, { status: 400 });
