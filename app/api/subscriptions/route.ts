@@ -20,3 +20,7 @@ export async function GET() {
 export async function DELETE(req: NextRequest) {
   const username = req.nextUrl.searchParams.get("username");
   if (!username) return NextResponse.json({ error: "username required" }, { status: 400 });
+  db.prepare("DELETE FROM subscriptions WHERE username = ?").run(username);
+  db.prepare("DELETE FROM videos WHERE username = ?").run(username);
+  return NextResponse.json({ ok: true });
+}
