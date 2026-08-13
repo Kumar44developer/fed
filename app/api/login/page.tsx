@@ -17,3 +17,6 @@ export default function LoginPage() {
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setBusy(true);
+    setErr("");
+    setMsg("");
+    const supabase = supabaseBrowser();
