@@ -20,3 +20,6 @@ export default function LoginPage() {
     setErr("");
     setMsg("");
     const supabase = supabaseBrowser();
+    try {
+      if (mode === "signup") {
+        const { error } = await supabase.auth.signUp({ email, password });
