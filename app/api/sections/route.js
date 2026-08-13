@@ -31,3 +31,5 @@ export async function POST(req: NextRequest) {
       (info.lastInsertRowid as number) ||
       (db.prepare("SELECT id FROM sections WHERE name = ?").get(name.trim()) as { id: number }).id;
   }
+  if (Array.isArray(usernames)) {
+    db.prepare("DELETE FROM section_members WHERE section_id = ?").run(id);
