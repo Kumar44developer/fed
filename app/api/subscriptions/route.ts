@@ -6,3 +6,8 @@ export async function GET() {
   const rows = db.prepare("SELECT * FROM subscriptions ORDER BY created_at DESC").all();
   return NextResponse.json(rows);
 }
+
+
+  export async function POST(req: NextRequest) {
+    const { username, full_name, profile_pic } = await req.json();
+    if (!username || !isValidUsername(username))
