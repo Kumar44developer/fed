@@ -34,3 +34,7 @@ export default function LoginPage() {
       }
     } catch (e) {
       setErr((e as Error).message);
+    } finally {
+      setBusy(false);
+    }
+  };
