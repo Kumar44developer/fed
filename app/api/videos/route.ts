@@ -30,3 +30,5 @@ export async function GET(req: NextRequest) {
       .prepare("SELECT * FROM videos WHERE username = ? ORDER BY timestamp DESC")
       .all(username);
     return NextResponse.json(rows);
+  } catch (e) {
+    if (cached.length) return NextResponse.json(cached);
