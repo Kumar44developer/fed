@@ -36,3 +36,7 @@ export async function POST(req: NextRequest) {
     const ins = db.prepare(
       "INSERT OR IGNORE INTO section_members (section_id, username) VALUES (?, ?)"
     );
+    for (const u of usernames) ins.run(id, u);
+  }
+  return NextResponse.json({ ok: true, id });
+}
