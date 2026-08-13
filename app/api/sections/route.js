@@ -45,3 +45,7 @@ export async function POST(req: NextRequest) {
 export async function DELETE(req: NextRequest) {
   const id = req.nextUrl.searchParams.get("id");
   if (!id) return NextResponse.json({ error: "id required" }, { status: 400 });
+  db.prepare("DELETE FROM sections WHERE id = ?").run(id);
+  db.prepare("DELETE FROM section_members WHERE section_id = ?").run(id);
+  return NextResponse.json({ ok: true });
+}
