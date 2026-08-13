@@ -32,3 +32,5 @@ export default function LoginPage() {
         router.push("/");
         router.refresh();
       }
+    } catch (e) {
+      setErr((e as Error).message);
