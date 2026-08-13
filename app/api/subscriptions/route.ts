@@ -13,3 +13,6 @@ export async function GET() {
     if (!username || !isValidUsername(username))
   db.prepare(
     "INSERT OR IGNORE INTO subscriptions (username, full_name, profile_pic) VALUES (?, ?, ?)"
+  ).run(username, full_name ?? "", profile_pic ?? "");
+  return NextResponse.json({ ok: true });
+}
