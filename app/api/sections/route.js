@@ -33,3 +33,6 @@ export async function POST(req: NextRequest) {
   }
   if (Array.isArray(usernames)) {
     db.prepare("DELETE FROM section_members WHERE section_id = ?").run(id);
+    const ins = db.prepare(
+      "INSERT OR IGNORE INTO section_members (section_id, username) VALUES (?, ?)"
+    );
