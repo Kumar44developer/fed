@@ -25,3 +25,6 @@ export async function GET(req: NextRequest) {
       for (const v of videos)
         insert.run(v.id, username, v.caption, v.videoUrl, v.thumbnailUrl, v.postUrl, v.timestamp);
     });
+    tx();
+    const rows = db
+      .prepare("SELECT * FROM videos WHERE username = ? ORDER BY timestamp DESC")
