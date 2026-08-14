@@ -48,3 +48,6 @@ export default function LoginPage() {
             <div className="brand-name">InstaFeed</div>
             <div className="brand-tag">YOUR FEED, YOUR RULES</div>
           </div>
+        </div>
+        <h1>{mode === "login" ? "Welcome back" : "Create your account"}</h1>
+        <form onSubmit={submit}>
