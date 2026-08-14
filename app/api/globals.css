@@ -46,3 +46,9 @@ button {
   top: 0;
   z-index: 20;
 }
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
