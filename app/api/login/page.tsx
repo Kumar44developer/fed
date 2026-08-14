@@ -72,3 +72,6 @@ export default function LoginPage() {
           {err && <p className="error">{err}</p>}
           {msg && <p className="success">{msg}</p>}
           <button className="pill accent full" type="submit" disabled={busy}>
+            {busy ? "…" : mode === "login" ? "Log in" : "Sign up"}
+          </button>
+        </form>
