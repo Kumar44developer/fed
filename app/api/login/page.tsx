@@ -63,3 +63,5 @@ export default function LoginPage() {
           <input
             className="text-input"
             type="password"
+            placeholder="Password (min 6 characters)"
+            value={password}
