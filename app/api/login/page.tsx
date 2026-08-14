@@ -42,3 +42,6 @@ export default function LoginPage() {
   return (
     <div className="auth-page">
       <div className="auth-card">
+        <div className="brand" style={{ justifyContent: "center", marginBottom: 18 }}>
+          <div className="brand-icon">▶</div>
+          <div>
