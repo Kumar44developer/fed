@@ -45,3 +45,6 @@ export default function LoginPage() {
         <div className="brand" style={{ justifyContent: "center", marginBottom: 18 }}>
           <div className="brand-icon">▶</div>
           <div>
+            <div className="brand-name">InstaFeed</div>
+            <div className="brand-tag">YOUR FEED, YOUR RULES</div>
+          </div>
