@@ -14,3 +14,9 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
