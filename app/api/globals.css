@@ -8,3 +8,9 @@
   --accent: #e1306c;
   --accent2: #833ab4;
 }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
