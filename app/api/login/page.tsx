@@ -51,3 +51,6 @@ export default function LoginPage() {
         </div>
         <h1>{mode === "login" ? "Welcome back" : "Create your account"}</h1>
         <form onSubmit={submit}>
+          <input
+            className="text-input"
+            type="email"
