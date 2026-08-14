@@ -75,3 +75,6 @@ export default function LoginPage() {
             {busy ? "…" : mode === "login" ? "Log in" : "Sign up"}
           </button>
         </form>
+        <p className="muted switch-mode">
+          {mode === "login" ? (
+            <>
