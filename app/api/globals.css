@@ -59,3 +59,8 @@ button {
   border-radius: 12px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #fff;
+  background: linear-gradient(45deg, #f09433, #dc2743, #bc1888, #833ab4);
+}
