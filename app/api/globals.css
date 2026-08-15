@@ -52,3 +52,7 @@ button {
   align-items: center;
   gap: 10px;
 }
+
+.brand-icon {
+  width: 42px;
+  height: 42px;
