@@ -76,3 +76,9 @@ button {
   letter-spacing: 0.12em;
   color: var(--muted);
 }
+
+.topsearch {
+  flex: 1;
+  max-width: 640px;
+  display: flex;
+}
