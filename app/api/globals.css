@@ -144,3 +144,6 @@ button {
 .search-result-bar {
   display: flex;
   align-items: center;
+  gap: 12px;
+  padding: 10px 24px;
+  background: var(--panel);
