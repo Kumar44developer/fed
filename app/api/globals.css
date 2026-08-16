@@ -160,3 +160,6 @@ button {
 .chipbar {
   display: flex;
   align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background: #000;
