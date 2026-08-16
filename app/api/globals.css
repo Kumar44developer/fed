@@ -135,3 +135,8 @@ button {
   font-size: 12px;
   margin: 8px 2px 0;
 }
+
+.pill:disabled {
+  opacity: 0.55;
+  cursor: default;
+}
