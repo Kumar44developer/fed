@@ -170,3 +170,7 @@ button {
 .side-toggle {
   display: flex;
   background: var(--chip);
+  border-radius: 20px;
+  padding: 3px;
+  flex-shrink: 0;
+}
