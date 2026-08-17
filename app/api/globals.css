@@ -174,3 +174,7 @@ button {
   padding: 3px;
   flex-shrink: 0;
 }
+
+.side-toggle button {
+  border: none;
+  background: transparent;
