@@ -181,3 +181,6 @@ button {
     color: var(--muted);
   padding: 6px 14px;
   border-radius: 17px;
+  font-weight: 600;
+  font-size: 13px;
+}
