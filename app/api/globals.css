@@ -239,3 +239,5 @@ button {
 
 .sidebar li:hover,
 .sidebar li.active {
+  background: var(--chip);
+}
