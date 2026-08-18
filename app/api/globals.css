@@ -248,3 +248,6 @@ button {
   height: 34px;
   border-radius: 50%;
   object-fit: cover;
+  background: var(--border);
+  flex-shrink: 0;
+}
