@@ -217,3 +217,7 @@ button {
   border-right: 1px solid #17171f;
   min-height: calc(100vh - 130px);
 }
+
+
+.sidebar h2 {
+  font-size: 17px;
