@@ -241,3 +241,7 @@ button {
 .sidebar li.active {
   background: var(--chip);
 }
+
+.sidebar li img,
+.sidebar .avatar-ph {
+  width: 34px;
