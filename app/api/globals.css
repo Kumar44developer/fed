@@ -255,3 +255,5 @@ button {
 .sub-name {
   flex: 1;
   font-size: 14px;
+  font-weight: 600;
+  overflow: hidden;
