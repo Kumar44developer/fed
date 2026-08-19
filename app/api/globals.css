@@ -294,3 +294,8 @@ button {
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 26px 20px;
 }
+
+.card {
+  cursor: pointer;
+}
+
