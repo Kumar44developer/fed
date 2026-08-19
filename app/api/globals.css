@@ -282,3 +282,7 @@ button {
   font-size: 26px;
   margin-bottom: 18px;
 }
+
+.empty {
+  color: var(--muted);
+  text-align: center;
