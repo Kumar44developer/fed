@@ -323,3 +323,8 @@ button {
   padding: 4px 9px;
   border-radius: 6px;
 }
+
+
+.meta {
+  display: flex;
+  gap: 12px;
