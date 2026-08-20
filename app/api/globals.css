@@ -299,3 +299,7 @@ button {
   cursor: pointer;
 }
 
+
+.thumb {
+  position: relative;
+  border-radius: 14px;
