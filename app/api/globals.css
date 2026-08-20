@@ -317,3 +317,6 @@ button {
   position: absolute;
   right: 10px;
   bottom: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 12px;
