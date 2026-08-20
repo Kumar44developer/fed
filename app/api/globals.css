@@ -377,3 +377,5 @@ button {
   padding: 16px;
   max-width: 420px;
   width: 92%;
+  max-height: 92vh;
+  display: flex;
