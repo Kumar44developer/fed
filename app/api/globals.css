@@ -379,3 +379,6 @@ button {
   width: 92%;
   max-height: 92vh;
   display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
