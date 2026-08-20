@@ -358,3 +358,7 @@ button {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+.modal {
+  position: fixed;
+  inset: 0;
