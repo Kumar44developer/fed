@@ -312,3 +312,8 @@ button {
 .card:hover .thumb img {
   transform: scale(1.04);
 }
+
+.play-badge {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
