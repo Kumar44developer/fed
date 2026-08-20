@@ -303,3 +303,7 @@ button {
 .thumb {
   position: relative;
   border-radius: 14px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s;
+}
