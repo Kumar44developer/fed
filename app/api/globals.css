@@ -368,3 +368,9 @@ button {
   justify-content: center;
   z-index: 50;
 }
+
+
+.modal-inner {
+  position: relative;
+  background: var(--panel);
+  border-radius: 16px;
