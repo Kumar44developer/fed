@@ -328,3 +328,5 @@ button {
 .meta {
   display: flex;
   gap: 12px;
+  padding: 10px 2px 0;
+}
