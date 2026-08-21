@@ -389,3 +389,7 @@ button {
   border-radius: 12px;
   background: #000;
 }
+
+.modal-close {
+  position: absolute;
+  top: -14px;
