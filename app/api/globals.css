@@ -402,3 +402,6 @@ button {
   color: #000;
   font-weight: 700;
 }
+
+.modal-meta a {
+  color: var(--accent);
