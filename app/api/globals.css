@@ -438,3 +438,8 @@ button {
   opacity: 0;
   transition: opacity 0.15s;
 }
+
+
+.thumb:hover .pin-btn {
+  opacity: 1;
+}
