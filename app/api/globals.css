@@ -463,3 +463,8 @@ button {
 .small-modal h3 {
   margin-bottom: 4px;
 }
+
+.text-input {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
