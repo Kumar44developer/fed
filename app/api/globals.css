@@ -443,3 +443,8 @@ button {
 .thumb:hover .pin-btn {
   opacity: 1;
 }
+
+.pin-btn.pinned {
+  filter: none;
+  opacity: 1;
+}
