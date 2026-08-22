@@ -473,3 +473,8 @@ button {
   font-size: 14px;
   outline: none;
 }
+
+
+.pick-list {
+  list-style: none;
+  max-height: 260px;
