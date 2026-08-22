@@ -459,3 +459,7 @@ button {
 .small-modal {
   max-width: 380px;
 }
+
+.small-modal h3 {
+  margin-bottom: 4px;
+}
