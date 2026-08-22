@@ -448,3 +448,7 @@ button {
   filter: none;
   opacity: 1;
 }
+
+.playlist-ic {
+  display: flex;
+  align-items: center;
