@@ -485,3 +485,6 @@ button {
 .pick-list li {
   padding: 9px 12px;
   border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
