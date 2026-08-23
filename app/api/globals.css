@@ -488,3 +488,7 @@ button {
   cursor: pointer;
   font-size: 14px;
 }
+
+.pick-list li:hover {
+  background: var(--chip);
+}
