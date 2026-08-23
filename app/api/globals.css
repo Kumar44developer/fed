@@ -496,3 +496,8 @@ button {
 .pick-list li.picked {
   background: var(--chip);
 }
+
+.row {
+  display: flex;
+  gap: 10px;
+}
