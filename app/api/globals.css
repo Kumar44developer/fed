@@ -492,3 +492,7 @@ button {
 .pick-list li:hover {
   background: var(--chip);
 }
+
+.pick-list li.picked {
+  background: var(--chip);
+}
