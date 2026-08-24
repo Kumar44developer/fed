@@ -39,3 +39,7 @@
   text-align: left;
   gap: 24px;
 }
+
+.intro h1 {
+  max-width: 320px;
+  font-size: 40px;
