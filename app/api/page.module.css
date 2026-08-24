@@ -19,3 +19,9 @@
   font-family: var(--font-geist-sans);
   background-color: var(--background);
 }
+
+.main {
+  display: flex;
+  flex: 1;
+  width: 100%;
+  max-width: 800px;
