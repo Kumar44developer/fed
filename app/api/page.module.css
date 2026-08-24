@@ -73,3 +73,9 @@
   gap: 16px;
   font-size: 14px;
 }
+
+
+.ctas a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
