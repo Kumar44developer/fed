@@ -58,3 +58,8 @@
   text-wrap: balance;
   color: var(--text-secondary);
 }
+
+.intro a {
+  font-weight: 500;
+  color: var(--text-primary);
+}
