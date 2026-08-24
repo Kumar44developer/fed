@@ -49,3 +49,8 @@
   text-wrap: balance;
   color: var(--text-primary);
 }
+
+
+.intro p {
+  max-width: 440px;
+  font-size: 18px;
