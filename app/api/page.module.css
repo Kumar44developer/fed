@@ -105,3 +105,9 @@ a.secondary {
     background: var(--button-primary-hover);
     border-color: transparent;
   }
+
+  a.secondary:hover {
+    background: var(--button-secondary-hover);
+    border-color: transparent;
+  }
+}
