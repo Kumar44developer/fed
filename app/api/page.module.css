@@ -63,3 +63,9 @@
   font-weight: 500;
   color: var(--text-primary);
 }
+
+
+.ctas {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
