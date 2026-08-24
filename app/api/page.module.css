@@ -103,3 +103,5 @@ a.secondary {
 @media (hover: hover) and (pointer: fine) {
   a.primary:hover {
     background: var(--button-primary-hover);
+    border-color: transparent;
+  }
