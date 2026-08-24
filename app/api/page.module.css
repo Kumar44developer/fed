@@ -88,3 +88,6 @@
   width: fit-content;
   font-weight: 500;
 }
+
+a.primary {
+  background: var(--text-primary);
