@@ -100,3 +100,6 @@ a.secondary {
   border-color: var(--button-secondary-border);
 }
 
+@media (hover: hover) and (pointer: fine) {
+  a.primary:hover {
+    background: var(--button-primary-hover);
