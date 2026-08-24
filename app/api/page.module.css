@@ -94,3 +94,9 @@ a.primary {
   color: var(--background);
   gap: 8px;
 }
+
+
+a.secondary {
+  border-color: var(--button-secondary-border);
+}
+
