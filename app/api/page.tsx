@@ -34,3 +34,7 @@ interface Section {
   name: string;
   usernames: string[];
 }
+interface Playlist {
+  id: number;
+  name: string;
+
