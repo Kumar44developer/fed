@@ -37,4 +37,5 @@ interface Section {
 interface Playlist {
   id: number;
   name: string;
-
+ videos: Video[];
+}
