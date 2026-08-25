@@ -24,3 +24,7 @@ interface Video {
   video_url: string;
   thumbnail_url: string;
   post_url: string;
+  timestamp: string;
+  full_name?: string;
+  profile_pic?: string;
+}
