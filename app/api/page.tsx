@@ -15,3 +15,9 @@ interface Sub {
   full_name: string;
   profile_pic: string;
 }
+
+
+interface Video {
+  id: string;
+  username: string;
+  caption: string;
