@@ -9,3 +9,9 @@ interface Profile {
   profilePicUrl: string;
   followersCount?: number;
 }
+
+interface Sub {
+  username: string;
+  full_name: string;
+  profile_pic: string;
+}
