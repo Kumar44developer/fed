@@ -133,3 +133,8 @@ a.secondary {
   .logo {
     filter: invert();
   }
+
+
+  .page {
+    --background: #000;
+    --foreground: #000;
