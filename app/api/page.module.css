@@ -116,3 +116,7 @@ a.secondary {
   .main {
     padding: 48px 24px;
   }
+
+  .intro {
+    gap: 16px;
+  }
