@@ -69,3 +69,7 @@ export default function Home() {
   const [query, setQuery] = useState("");
   const [searching, setSearching] = useState(false);
   const [result, setResult] = useState<Profile | null>(null);
+  const [searchError, setSearchError] = useState("");
+  const [subs, setSubs] = useState<Sub[]>([]);
+  const [sections, setSections] = useState<Section[]>([]);
+  const [playlists, setPlaylists] = useState<Playlist[]>([]);
