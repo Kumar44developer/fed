@@ -82,3 +82,5 @@ export default function Home() {
   const [playing, setPlaying] = useState<Video | null>(null);
   const [addToPlaylist, setAddToPlaylist] = useState<Video | null>(null);
   const [editSection, setEditSection] = useState<Section | null>(null);
+  const [newSectionName, setNewSectionName] = useState("");
+  const [newSectionMembers, setNewSectionMembers] = useState<string[]>([]);
