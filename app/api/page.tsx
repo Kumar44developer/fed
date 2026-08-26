@@ -48,3 +48,6 @@ function timeAgo(ts: string) {
   const s = Math.floor((Date.now() - t) / 1000);
   if (s < 3600) return `${Math.max(1, Math.floor(s / 60))} minutes ago`;
   if (s < 86400) return `${Math.floor(s / 3600)} hours ago`;
+  if (s < 2592000) return `${Math.floor(s / 86400)} days ago`;
+  return `${Math.floor(s / 2592000)} months ago`;
+}
