@@ -51,3 +51,8 @@ function timeAgo(ts: string) {
   if (s < 2592000) return `${Math.floor(s / 86400)} days ago`;
   return `${Math.floor(s / 2592000)} months ago`;
 }
+
+function title(caption: string) {
+  const first = (caption || "").split("\n")[0];
+  return first.length > 90 ? first.slice(0, 90) + "…" : first || "(no caption)";
+}
