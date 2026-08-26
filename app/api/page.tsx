@@ -63,3 +63,9 @@ type View =
   | { kind: "history" }
   | { kind: "user"; username: string }
   | { kind: "section"; id: number }
+  | { kind: "playlist"; id: number };
+
+export default function Home() {
+  const [query, setQuery] = useState("");
+  const [searching, setSearching] = useState(false);
+  const [result, setResult] = useState<Profile | null>(null);
