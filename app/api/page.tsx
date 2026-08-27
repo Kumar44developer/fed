@@ -95,3 +95,6 @@ export default function Home() {
     ]);
     setSubs(s);
     setSections(sec);
+    setPlaylists(pl);
+    setPins(pn);
+  }, []);
