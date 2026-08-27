@@ -84,3 +84,8 @@ export default function Home() {
   const [editSection, setEditSection] = useState<Section | null>(null);
   const [newSectionName, setNewSectionName] = useState("");
   const [newSectionMembers, setNewSectionMembers] = useState<string[]>([]);
+
+
+  const loadMeta = useCallback(async () => {
+    const [s, sec, pl, pn] = await Promise.all([
+      fetch("/api/subscriptions").then((r) => r.json()),
