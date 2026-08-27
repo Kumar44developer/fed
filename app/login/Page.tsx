@@ -10,3 +10,5 @@ import { supabaseBrowser } from "@/lib/supabase/client";
   const [password, setPassword] = useState("");
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState("");
+  const [err, setErr] = useState("");
+  const router = useRouter();
