@@ -89,3 +89,5 @@ export default function Home() {
   const loadMeta = useCallback(async () => {
     const [s, sec, pl, pn] = await Promise.all([
       fetch("/api/subscriptions").then((r) => r.json()),
+      fetch("/api/sections").then((r) => r.json()),
+      fetch("/api/playlists").then((r) => r.json()),
