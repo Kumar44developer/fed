@@ -16,3 +16,6 @@ import { supabaseBrowser } from "@/lib/supabase/client";
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     setBusy(true);
+    setErr("");
+    setMsg("");
+    const supabase = supabaseBrowser();
