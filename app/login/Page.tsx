@@ -42,3 +42,5 @@ import { supabaseBrowser } from "@/lib/supabase/client";
     <div className="auth-page">
       <div className="auth-card">
         <div className="brand" style={{ justifyContent: "center", marginBottom: 18 }}>
+          <div className="brand-icon">▶</div>
+          <div>
