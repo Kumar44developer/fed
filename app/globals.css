@@ -31,3 +31,8 @@ button {
   color: var(--muted);
   font-size: 13px;
 }
+
+.error {
+  color: #ff6b6b;
+  font-size: 13px;
+}
