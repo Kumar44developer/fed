@@ -33,3 +33,7 @@ import { supabaseBrowser } from "@/lib/supabase/client";
       }
     } catch (e) {
       setErr((e as Error).message);
+    } finally {
+      setBusy(false);
+    }
+  };
