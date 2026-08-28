@@ -31,3 +31,5 @@ import { supabaseBrowser } from "@/lib/supabase/client";
         router.push("/");
         router.refresh();
       }
+    } catch (e) {
+      setErr((e as Error).message);
