@@ -62,3 +62,8 @@ import { supabaseBrowser } from "@/lib/supabase/client";
             className="text-input"
             type="password"
             placeholder="Password (min 6 characters)"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            minLength={6}
+            required
+          />
