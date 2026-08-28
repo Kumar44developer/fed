@@ -67,3 +67,6 @@ import { supabaseBrowser } from "@/lib/supabase/client";
             minLength={6}
             required
           />
+            {err && <p className="error">{err}</p>}
+            {msg && <p className="success">{msg}</p>}
+            <button className="pill accent full" type="submit" disabled={busy}>
