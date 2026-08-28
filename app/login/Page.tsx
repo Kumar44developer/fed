@@ -73,3 +73,6 @@ import { supabaseBrowser } from "@/lib/supabase/client";
             {busy ? "…" : mode === "login" ? "Log in" : "Sign up"}
           </button>
         </form>
+       <p className="muted switch-mode">
+          {mode === "login" ? (
+            <>
