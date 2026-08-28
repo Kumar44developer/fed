@@ -58,3 +58,7 @@ import { supabaseBrowser } from "@/lib/supabase/client";
             onChange={(e) => setEmail(e.target.value)}
             required
           />
+          <input
+            className="text-input"
+            type="password"
+            placeholder="Password (min 6 characters)"
