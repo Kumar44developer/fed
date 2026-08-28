@@ -76,3 +76,6 @@ import { supabaseBrowser } from "@/lib/supabase/client";
        <p className="muted switch-mode">
           {mode === "login" ? (
             <>
+              No account?{" "}
+              <button onClick={() => { setMode("signup"); setErr(""); }}>Sign up</button>
+            </>
