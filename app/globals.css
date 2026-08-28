@@ -41,3 +41,6 @@ button {
   display: flex;
   align-items: center;
   gap: 24px;
+  padding: 12px 24px;
+  background: #000;
+  position: sticky;
