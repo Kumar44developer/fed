@@ -23,3 +23,5 @@ import { supabaseBrowser } from "@/lib/supabase/client";
       if (mode === "signup") {
         const { error } = await supabase.auth.signUp({ email, password });
         if (error) throw error;
+        setMsg("Account created! Check your email to confirm, then log in.");
+        setMode("login");
