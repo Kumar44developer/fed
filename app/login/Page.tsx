@@ -79,3 +79,9 @@ import { supabaseBrowser } from "@/lib/supabase/client";
               No account?{" "}
               <button onClick={() => { setMode("signup"); setErr(""); }}>Sign up</button>
             </>
+          ) : (
+            <>
+              Already have an account?{" "}
+              <button onClick={() => { setMode("login"); setErr(""); }}>Log in</button>
+            </>
+          )}
