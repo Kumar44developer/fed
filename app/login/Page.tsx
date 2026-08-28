@@ -51,3 +51,7 @@ import { supabaseBrowser } from "@/lib/supabase/client";
         <h1>{mode === "login" ? "Welcome back" : "Create your account"}</h1>
         <form onSubmit={submit}>
           <input
+            className="text-input"
+            type="email"
+            placeholder="Email"
+            value={email}
