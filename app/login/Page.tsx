@@ -85,3 +85,8 @@ import { supabaseBrowser } from "@/lib/supabase/client";
               <button onClick={() => { setMode("login"); setErr(""); }}>Log in</button>
             </>
           )}
+        </p>
+      </div>
+    </div>
+  );
+}
