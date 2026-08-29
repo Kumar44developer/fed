@@ -74,3 +74,6 @@ button {
 
 .brand-tag {
   font-size: 10px;
+  letter-spacing: 0.12em;
+  color: var(--muted);
+}
