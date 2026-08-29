@@ -81,3 +81,5 @@ button {
 .topsearch {
   flex: 1;
   max-width: 640px;
+  display: flex;
+}
