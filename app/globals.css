@@ -95,3 +95,7 @@ button {
   font-size: 15px;
   outline: none;
 }
+
+.topsearch button {
+  padding: 0 20px;
+  border-radius: 0 24px 24px 0;
