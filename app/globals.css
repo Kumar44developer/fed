@@ -99,3 +99,5 @@ button {
 .topsearch button {
   padding: 0 20px;
   border-radius: 0 24px 24px 0;
+  border: 1px solid var(--border);
+  background: var(--chip);
