@@ -91,3 +91,7 @@ button {
   border: 1px solid var(--border);
   border-right: none;
   background: var(--panel);
+  color: var(--text);
+  font-size: 15px;
+  outline: none;
+}
