@@ -65,3 +65,8 @@ button {
   color: #fff;
   background: linear-gradient(45deg, #f09433, #dc2743, #bc1888, #833ab4);
 }
+
+.brand-name {
+  font-size: 20px;
+  font-weight: 800;
+}
