@@ -101,3 +101,6 @@ button {
   border-radius: 0 24px 24px 0;
   border: 1px solid var(--border);
   background: var(--chip);
+  color: var(--text);
+  font-size: 16px;
+}
