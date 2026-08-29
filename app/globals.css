@@ -119,3 +119,6 @@ button {
   border: 1px solid var(--border);
   background: var(--chip);
   color: var(--text);
+  font-weight: 600;
+  font-size: 14px;
+}
