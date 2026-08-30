@@ -122,3 +122,9 @@ button {
   font-weight: 600;
   font-size: 14px;
 }
+
+.pill.accent {
+  background: linear-gradient(45deg, var(--accent), var(--accent2));
+  border: none;
+}
+
