@@ -135,3 +135,6 @@ button {
 
   .pill.small {
     padding: 6px 12px;
+    font-size: 12px;
+  margin: 8px 2px 0;
+}
