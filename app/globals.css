@@ -132,3 +132,6 @@ button {
   border-color: #833ab4;
   color: #c9a0ff;
 }
+
+  .pill.small {
+    padding: 6px 12px;
