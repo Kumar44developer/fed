@@ -204,3 +204,9 @@ button {
   font-size: 14px;
   white-space: nowrap;
 }
+
+
+.chip.active {
+  background: #fff;
+  color: #000;
+}
