@@ -141,3 +141,5 @@ button {
 
 .pill:disabled {
   opacity: 0.55;
+  cursor: default;
+}
