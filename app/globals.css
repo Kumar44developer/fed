@@ -152,3 +152,7 @@ button {
     background: var(--panel);
   border-bottom: 1px solid var(--border);
 }
+
+.search-result-bar img {
+  width: 36px;
+  height: 36px;
