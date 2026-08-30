@@ -169,3 +169,7 @@ button {
   overflow-x: auto;
   border-bottom: 1px solid #17171f;
 }
+
+.side-toggle {
+  display: flex;
+  background: var(--chip);
