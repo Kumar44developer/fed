@@ -188,3 +188,8 @@ button {
   font-weight: 600;
   font-size: 13px;
 }
+
+.side-toggle button.on {
+  background: #fff;
+  color: #000;
+}
