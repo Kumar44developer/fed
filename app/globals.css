@@ -182,3 +182,6 @@ button {
 .side-toggle button {
   border: none;
   background: transparent;
+  color: var(--muted);
+  padding: 6px 14px;
+  border-radius: 17px;
