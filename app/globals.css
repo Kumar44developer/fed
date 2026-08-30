@@ -128,3 +128,7 @@ button {
   border: none;
 }
 
+.pill.purple {
+  border-color: #833ab4;
+  color: #c9a0ff;
+}
