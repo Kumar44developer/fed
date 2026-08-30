@@ -159,3 +159,8 @@ button {
   border-radius: 50%;
   object-fit: cover;
 }
+
+.chipbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
