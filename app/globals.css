@@ -198,3 +198,6 @@ button {
   padding: 9px 20px;
   border-radius: 20px;
   border: none;
+  background: var(--chip);
+  color: var(--text);
+  font-weight: 600;
