@@ -143,3 +143,8 @@ button {
   opacity: 0.55;
   cursor: default;
 }
+
+.search-result-bar {
+  display: flex;
+  align-items: center;
+    gap: 12px;
