@@ -193,3 +193,8 @@ button {
   background: #fff;
   color: #000;
 }
+
+.chip {
+  padding: 9px 20px;
+  border-radius: 20px;
+  border: none;
