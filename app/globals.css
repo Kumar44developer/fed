@@ -253,3 +253,8 @@ button {
   background: var(--border);
   flex-shrink: 0;
 }
+
+.sub-name {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 600;
