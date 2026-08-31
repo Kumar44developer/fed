@@ -307,3 +307,6 @@ button {
 .thumb {
   position: relative;
   border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+}
