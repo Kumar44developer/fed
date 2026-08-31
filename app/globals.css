@@ -333,3 +333,9 @@ button {
     padding: 4px 9px;
     border-radius: 6px;
   }
+
+.meta {
+  display: flex;
+  gap: 12px;
+  padding: 10px 2px 0;
+}
