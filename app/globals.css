@@ -274,3 +274,8 @@ button {
 .remove:hover {
   color: #ff6b6b;
 }
+
+.feed {
+  flex: 1;
+  padding: 20px 28px;
+}
