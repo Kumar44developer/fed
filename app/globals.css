@@ -339,3 +339,7 @@ button {
   gap: 12px;
   padding: 10px 2px 0;
 }
+
+.avatar {
+  width: 38px;
+  height: 38px;
