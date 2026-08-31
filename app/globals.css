@@ -314,3 +314,7 @@ button {
 .thumb img {
   width: 100%;
   aspect-ratio: 16 / 10;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s;
+  }
