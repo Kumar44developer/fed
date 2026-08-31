@@ -262,3 +262,7 @@ button {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+.remove {
+  background: transparent;
+  border: none;
