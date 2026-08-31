@@ -270,3 +270,7 @@ button {
   font-size: 13px;
   padding: 4px 6px;
 }
+
+.remove:hover {
+  color: #ff6b6b;
+}
