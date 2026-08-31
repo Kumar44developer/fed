@@ -279,3 +279,9 @@ button {
   flex: 1;
   padding: 20px 28px;
 }
+
+
+.feed-title {
+  font-size: 26px;
+  margin-bottom: 18px;
+}
