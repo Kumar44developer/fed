@@ -318,3 +318,7 @@ button {
     display: block;
     transition: transform 0.25s;
   }
+
+.card:hover .thumb img {
+  transform: scale(1.04);
+}
