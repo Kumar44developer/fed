@@ -289,3 +289,5 @@ button {
 .empty {
   color: var(--muted);
   text-align: center;
+  padding: 70px 20px;
+}
