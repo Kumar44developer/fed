@@ -329,3 +329,7 @@ button {
   bottom: 10px;
   background: rgba(0, 0, 0, 0.8);
   color: #fff;
+  font-size: 12px;
+    padding: 4px 9px;
+    border-radius: 6px;
+  }
