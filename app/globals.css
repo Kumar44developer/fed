@@ -355,3 +355,8 @@ button {
 .meta-text {
   min-width: 0;
 }
+
+
+.video-title {
+  font-size: 15px;
+  font-weight: 700;
