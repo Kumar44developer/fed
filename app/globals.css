@@ -414,3 +414,5 @@ button {
 .modal-meta a {
   color: var(--accent);
   font-size: 13px;
+  text-decoration: none;
+}
