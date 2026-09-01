@@ -407,3 +407,6 @@ button {
   border-radius: 50%;
   border: none;
   background: #fff;
+  color: #000;
+  font-weight: 700;
+}
