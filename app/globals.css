@@ -347,3 +347,7 @@ button {
   object-fit: cover;
   flex-shrink: 0;
 }
+
+.avatar-ph {
+  background: var(--border);
+}
