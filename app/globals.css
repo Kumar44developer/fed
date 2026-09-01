@@ -390,3 +390,7 @@ button {
   flex-direction: column;
   gap: 10px;
 }
+
+.modal-inner video {
+  width: 100%;
+  max-height: 68vh;
