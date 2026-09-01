@@ -429,3 +429,8 @@ button {
   display: flex;
   gap: 10px;
 }
+
+
+.feed-title {
+  margin-bottom: 0;
+}
