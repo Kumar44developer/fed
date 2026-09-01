@@ -382,3 +382,6 @@ button {
   position: relative;
   background: var(--panel);
   border-radius: 16px;
+  padding: 16px;
+  max-width: 420px;
+  width: 92%;
