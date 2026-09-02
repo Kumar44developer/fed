@@ -434,3 +434,7 @@ button {
 .feed-title {
   margin-bottom: 0;
 }
+
+.pin-btn {
+  position: absolute;
+  top: 10px;
