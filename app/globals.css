@@ -442,3 +442,6 @@ button {
   border: none;
   background: rgba(0, 0, 0, 0.65);
   border-radius: 8px;
+  padding: 5px 8px;
+  font-size: 13px;
+  filter: grayscale(1);
