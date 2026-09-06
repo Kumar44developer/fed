@@ -448,3 +448,10 @@ button {
   opacity: 0;
   transition: opacity 0.15s;
 }
+
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
