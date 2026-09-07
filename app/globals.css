@@ -509,3 +509,9 @@ button {
   color: var(--text);
   font-size: 16px;
 }
+
+.top-actions {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
