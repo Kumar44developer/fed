@@ -621,3 +621,8 @@ button {
 .body {
   display: flex;
 }
+
+
+.sidebar {
+  width: 280px;
+  flex-shrink: 0;
