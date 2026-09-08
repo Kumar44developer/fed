@@ -617,3 +617,7 @@ button {
   background: #fff;
   color: #000;
 }
+
+.body {
+  display: flex;
+}
