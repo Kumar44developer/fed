@@ -636,3 +636,6 @@ button {
   margin: 0 10px 12px;
 }
 
+.sidebar ul {
+  list-style: none;
+}
