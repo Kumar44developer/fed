@@ -639,3 +639,8 @@ button {
 .sidebar ul {
   list-style: none;
 }
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
