@@ -648,3 +648,9 @@ button {
   border-radius: 10px;
   cursor: pointer;
 }
+
+.sidebar li:hover,
+.sidebar li.active {
+  background: var(--chip);
+}
+
