@@ -658,3 +658,8 @@ button {
 .sidebar .avatar-ph {
   width: 34px;
   height: 34px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--border);
+  flex-shrink: 0;
+}
