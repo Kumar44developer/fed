@@ -761,3 +761,7 @@ button {
 .avatar-ph {
   background: var(--border);
 }
+
+.meta-text {
+  min-width: 0;
+}
