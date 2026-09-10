@@ -826,3 +826,7 @@ button {
   font-size: 13px;
   text-decoration: none;
 }
+
+.feed-head {
+  display: flex;
+  align-items: center;
