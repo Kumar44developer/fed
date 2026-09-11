@@ -873,3 +873,7 @@ button {
   justify-content: center;
   font-size: 14px;
 }
+
+.small-modal {
+  max-width: 380px;
+}
