@@ -895,3 +895,5 @@ button {
 .pick-list {
   list-style: none;
   max-height: 260px;
+  overflow-y: auto;
+}
