@@ -14,3 +14,5 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "InstaFeed",
+  description: "Subscribe to Instagram accounts and watch their videos",
+};
