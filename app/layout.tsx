@@ -16,3 +16,7 @@ export const metadata: Metadata = {
   title: "InstaFeed",
   description: "Subscribe to Instagram accounts and watch their videos",
 };
+
+export default function RootLayout({ children }: LayoutProps<"/">) {
+  return (
+    <html
