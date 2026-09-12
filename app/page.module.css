@@ -16,3 +16,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  font-family: var(--font-geist-sans);
+  background-color: var(--background);
+}
