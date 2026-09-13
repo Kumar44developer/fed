@@ -2,7 +2,7 @@
   --background: #fafafa;
   --foreground: #fff;
 
-
+   
   --text-primary: #000;
   --text-secondary: #666;
 
@@ -66,3 +66,6 @@
 .ctas {
   display: flex;
   flex-direction: row;
+  width: 100%;
+  max-width: 440px;
+  gap: 16px;
