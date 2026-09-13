@@ -132,3 +132,6 @@ a.secondary {
     filter: invert();
   }
 
+  .page {
+    --background: #000;
+    --foreground: #000;
