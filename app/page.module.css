@@ -125,3 +125,10 @@ a.secondary {
     letter-spacing: -1.92px;
   }
 }
+
+
+@media (prefers-color-scheme: dark) {
+  .logo {
+    filter: invert();
+  }
+
