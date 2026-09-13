@@ -118,3 +118,6 @@ a.secondary {
   .intro {
     gap: 16px;
   }
+
+  .intro h1 {
+    font-size: 32px;
