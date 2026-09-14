@@ -41,3 +41,5 @@ interface Playlist {
   name: string;
   videos: Video[];
 }
+
+  const proxied = (url: string) => (url ? `/api/proxy?url=${encodeURIComponent(url)}` : "");
