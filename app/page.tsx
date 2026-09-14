@@ -82,3 +82,6 @@ export default function Home() {
   const [sideTab, setSideTab] = useState<"subs" | "playlists">("subs");
   const [videos, setVideos] = useState<Video[]>([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [playing, setPlaying] = useState<Video | null>(null);
+  const [addToPlaylist, setAddToPlaylist] = useState<Video | null>(null);
