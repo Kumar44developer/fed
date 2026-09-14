@@ -27,3 +27,7 @@ interface Video {
   full_name?: string;
   profile_pic?: string;
 }
+
+
+interface Section {
+  id: number;
