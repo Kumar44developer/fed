@@ -48,3 +48,6 @@ interface Playlist {
 function timeAgo(ts: string) {
   const t = new Date(ts).getTime();
   if (!t) return "";
+  const s = Math.floor((Date.now() - t) / 1000);
+  if (s < 3600) return `${Math.max(1, Math.floor(s / 60))} minutes ago`;
+  if (s < 86400) return `${Math.floor(s / 3600)} hours ago`;
