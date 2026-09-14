@@ -12,3 +12,6 @@ interface Profile {
 
 interface Sub {
   username: string;
+  full_name: string;
+  profile_pic: string;
+}
