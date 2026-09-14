@@ -94,3 +94,6 @@ export default function Home() {
       fetch("/api/subscriptions").then((r) => r.json()),
       fetch("/api/sections").then((r) => r.json()),
       fetch("/api/playlists").then((r) => r.json()),
+      fetch("/api/pins").then((r) => r.json()),
+    ]);
+    setSubs(s);
