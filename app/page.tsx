@@ -31,3 +31,6 @@ interface Video {
 
 interface Section {
   id: number;
+  name: string;
+  usernames: string[];
+}
