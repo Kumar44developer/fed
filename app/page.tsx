@@ -60,3 +60,7 @@ function title(caption: string) {
   const first = (caption || "").split("\n")[0];
   return first.length > 90 ? first.slice(0, 90) + "…" : first || "(no caption)";
 }
+
+type View =
+  | { kind: "all" }
+  | { kind: "pinned" }
