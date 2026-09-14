@@ -43,3 +43,8 @@ interface Playlist {
 }
 
   const proxied = (url: string) => (url ? `/api/proxy?url=${encodeURIComponent(url)}` : "");
+
+
+function timeAgo(ts: string) {
+  const t = new Date(ts).getTime();
+  if (!t) return "";
