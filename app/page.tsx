@@ -64,3 +64,5 @@ function title(caption: string) {
 type View =
   | { kind: "all" }
   | { kind: "pinned" }
+  | { kind: "history" }
+  | { kind: "user"; username: string }
