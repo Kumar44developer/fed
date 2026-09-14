@@ -66,3 +66,5 @@ type View =
   | { kind: "pinned" }
   | { kind: "history" }
   | { kind: "user"; username: string }
+  | { kind: "section"; id: number }
+  | { kind: "playlist"; id: number };
