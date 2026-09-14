@@ -97,3 +97,7 @@ export default function Home() {
       fetch("/api/pins").then((r) => r.json()),
     ]);
     setSubs(s);
+    setSections(sec);
+    setPlaylists(pl);
+    setPins(pn);
+  }, []);
