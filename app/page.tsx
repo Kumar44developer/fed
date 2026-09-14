@@ -20,3 +20,6 @@ interface Video {
   id: string;
   username: string;
   caption: string;
+  video_url: string;
+  thumbnail_url: string;
+  post_url: string;
