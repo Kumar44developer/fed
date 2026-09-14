@@ -76,3 +76,6 @@ export default function Home() {
   const [searchError, setSearchError] = useState("");
   const [subs, setSubs] = useState<Sub[]>([]);
   const [sections, setSections] = useState<Section[]>([]);
+  const [playlists, setPlaylists] = useState<Playlist[]>([]);
+  const [pins, setPins] = useState<Video[]>([]);
+  const [view, setView] = useState<View>({ kind: "all" });
