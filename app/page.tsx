@@ -149,3 +149,8 @@ export default function Home() {
     const iv = setInterval(() => loadView(view), 30 * 1000);
     return () => clearInterval(iv);
   }, [view, loadView]);
+
+  const go = (v: View, refresh = false) => {
+    setView(v);
+    loadView(v, refresh);
+  };
