@@ -143,3 +143,7 @@ export default function Home() {
     loadMeta().then(() => loadView({ kind: "all" }));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    // server-side poller keeps Apify data fresh; here we just re-read the local DB
+    const iv = setInterval(() => loadView(view), 30 * 1000);
