@@ -109,3 +109,8 @@ export default function Home() {
       try {
         let data: Video[] = [];
         if (v.kind === "all") {
+          data = await fetch("/api/feed").then((r) => r.json());
+        } else if (v.kind === "user") {
+          const res = await fetch(
+            `/api/videos?username=${encodeURIComponent(v.username)}${refresh ? "&refresh=1" : ""}`
+          );
