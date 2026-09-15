@@ -154,3 +154,7 @@ export default function Home() {
     setView(v);
     loadView(v, refresh);
   };
+
+
+  const search = async (e: React.FormEvent) => {
+    e.preventDefault();
