@@ -114,3 +114,6 @@ export default function Home() {
           const res = await fetch(
             `/api/videos?username=${encodeURIComponent(v.username)}${refresh ? "&refresh=1" : ""}`
           );
+          const d = await res.json();
+          if (!res.ok) throw new Error(d.error || "Failed to load");
+          data = d;
