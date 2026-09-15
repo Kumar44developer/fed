@@ -105,3 +105,7 @@ export default function Home() {
   const loadView = useCallback(
     async (v: View, refresh = false) => {
       setLoading(true);
+      setError("");
+      try {
+        let data: Video[] = [];
+        if (v.kind === "all") {
