@@ -120,3 +120,7 @@ export default function Home() {
         } else if (v.kind === "section") {
           const all: Video[] = await fetch("/api/feed").then((r) => r.json());
           const sec = sections.find((s) => s.id === v.id);
+          data = all.filter((vid) => sec?.usernames.includes(vid.username));
+        } else if (v.kind === "playlist") {
+          const pl: Playlist[] = await fetch("/api/playlists").then((r) => r.json());
+          data = pl.find((p) => p.id === v.id)?.videos ?? [];
