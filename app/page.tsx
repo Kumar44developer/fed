@@ -147,3 +147,5 @@ export default function Home() {
   useEffect(() => {
     // server-side poller keeps Apify data fresh; here we just re-read the local DB
     const iv = setInterval(() => loadView(view), 30 * 1000);
+    return () => clearInterval(iv);
+  }, [view, loadView]);
