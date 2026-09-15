@@ -138,3 +138,8 @@ export default function Home() {
     },
     [sections]
   );
+
+  useEffect(() => {
+    loadMeta().then(() => loadView({ kind: "all" }));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
