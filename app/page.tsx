@@ -101,3 +101,7 @@ export default function Home() {
     setPlaylists(pl);
     setPins(pn);
   }, []);
+
+  const loadView = useCallback(
+    async (v: View, refresh = false) => {
+      setLoading(true);
