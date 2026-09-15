@@ -131,3 +131,8 @@ export default function Home() {
         }
         setVideos(data);
       } catch (e) {
+        setError((e as Error).message);
+      } finally {
+        setLoading(false);
+      }
+    },
