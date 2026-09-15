@@ -126,3 +126,6 @@ export default function Home() {
           data = pl.find((p) => p.id === v.id)?.videos ?? [];
         } else if (v.kind === "history") {
           data = await fetch("/api/history").then((r) => r.json());
+        } else if (v.kind === "pinned") {
+          data = await fetch("/api/pins").then((r) => r.json());
+        }
