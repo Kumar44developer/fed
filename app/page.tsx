@@ -117,3 +117,6 @@ export default function Home() {
           const d = await res.json();
           if (!res.ok) throw new Error(d.error || "Failed to load");
           data = d;
+        } else if (v.kind === "section") {
+          const all: Video[] = await fetch("/api/feed").then((r) => r.json());
+          const sec = sections.find((s) => s.id === v.id);
