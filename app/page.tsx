@@ -129,3 +129,5 @@ export default function Home() {
         } else if (v.kind === "pinned") {
           data = await fetch("/api/pins").then((r) => r.json());
         }
+        setVideos(data);
+      } catch (e) {
