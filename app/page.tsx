@@ -238,3 +238,6 @@ export default function Home() {
     });
     setEditSection(null);
     setNewSectionName("");
+    setNewSectionMembers([]);
+    await loadMeta();
+  };
