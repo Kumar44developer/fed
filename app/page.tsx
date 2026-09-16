@@ -173,3 +173,7 @@ export default function Home() {
       setSearching(false);
     }
   };
+
+  const subscribe = async (p: Profile) => {
+    await fetch("/api/subscriptions", {
+      method: "POST",
