@@ -233,3 +233,6 @@ export default function Home() {
       body: JSON.stringify({
         name: newSectionName.trim(),
         usernames: newSectionMembers,
+        ...(editSection ? { id: editSection.id } : {}),
+      }),
+    });
