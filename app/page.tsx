@@ -227,3 +227,5 @@ export default function Home() {
 
   const createSection = async () => {
     if (!newSectionName.trim()) return;
+    await fetch("/api/sections", {
+      method: "POST",
