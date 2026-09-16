@@ -184,3 +184,5 @@ export default function Home() {
         profile_pic: p.profilePicUrl,
       }),
     });
+    setResult(null);
+    setQuery("");
