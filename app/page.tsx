@@ -158,3 +158,5 @@ export default function Home() {
 
   const search = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!query.trim()) return;
+    setSearching(true);
