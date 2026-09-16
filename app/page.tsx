@@ -215,3 +215,5 @@ export default function Home() {
       await fetch(`/api/pins?video_id=${encodeURIComponent(v.id)}`, { method: "DELETE" });
     } else {
       await fetch("/api/pins", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
