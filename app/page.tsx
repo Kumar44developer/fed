@@ -236,3 +236,5 @@ export default function Home() {
         ...(editSection ? { id: editSection.id } : {}),
       }),
     });
+    setEditSection(null);
+    setNewSectionName("");
