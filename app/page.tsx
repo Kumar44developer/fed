@@ -222,3 +222,5 @@ export default function Home() {
     }
     const pn = await fetch("/api/pins").then((r) => r.json());
     setPins(pn);
+    if (view.kind === "pinned") setVideos(pn);
+  };
