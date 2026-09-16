@@ -189,3 +189,8 @@ export default function Home() {
     await loadMeta();
     go({ kind: "user", username: p.username }, true);
   };
+
+  const unsubscribe = async (username: string) => {
+    await fetch(`/api/subscriptions?username=${encodeURIComponent(username)}`, {
+      method: "DELETE",
+    });
