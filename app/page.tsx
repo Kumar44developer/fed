@@ -213,3 +213,5 @@ export default function Home() {
   const togglePin = async (v: Video) => {
     if (isPinned(v.id)) {
       await fetch(`/api/pins?video_id=${encodeURIComponent(v.id)}`, { method: "DELETE" });
+    } else {
+      await fetch("/api/pins", {
