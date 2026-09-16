@@ -162,3 +162,8 @@ export default function Home() {
     setSearching(true);
     setResult(null);
     setSearchError("");
+    try {
+      const res = await fetch(`/api/search?username=${encodeURIComponent(query.trim())}`);
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Search failed");
+      setResult(data);
