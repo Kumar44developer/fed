@@ -196,3 +196,5 @@ export default function Home() {
     });
     await loadMeta();
     if (view.kind === "user" && view.username === username) go({ kind: "all" });
+    else loadView(view);
+  };
