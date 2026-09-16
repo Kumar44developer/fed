@@ -220,3 +220,5 @@ export default function Home() {
         body: JSON.stringify({ video_id: v.id }),
       });
     }
+    const pn = await fetch("/api/pins").then((r) => r.json());
+    setPins(pn);
