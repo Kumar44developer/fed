@@ -229,3 +229,5 @@ export default function Home() {
     if (!newSectionName.trim()) return;
     await fetch("/api/sections", {
       method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
