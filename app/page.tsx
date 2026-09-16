@@ -224,3 +224,6 @@ export default function Home() {
     setPins(pn);
     if (view.kind === "pinned") setVideos(pn);
   };
+
+  const createSection = async () => {
+    if (!newSectionName.trim()) return;
