@@ -207,3 +207,6 @@ export default function Home() {
       body: JSON.stringify({ video_id: v.id }),
     });
   };
+
+  const isPinned = (id: string) => pins.some((p) => p.id === id);
+
