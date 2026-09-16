@@ -194,3 +194,5 @@ export default function Home() {
     await fetch(`/api/subscriptions?username=${encodeURIComponent(username)}`, {
       method: "DELETE",
     });
+    await loadMeta();
+    if (view.kind === "user" && view.username === username) go({ kind: "all" });
