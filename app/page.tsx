@@ -198,3 +198,6 @@ export default function Home() {
     if (view.kind === "user" && view.username === username) go({ kind: "all" });
     else loadView(view);
   };
+
+  const openVideo = (v: Video) => {
+    setPlaying(v);
