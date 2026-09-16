@@ -160,3 +160,5 @@ export default function Home() {
     e.preventDefault();
     if (!query.trim()) return;
     setSearching(true);
+    setResult(null);
+    setSearchError("");
