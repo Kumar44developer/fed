@@ -186,3 +186,6 @@ export default function Home() {
     });
     setResult(null);
     setQuery("");
+    await loadMeta();
+    go({ kind: "user", username: p.username }, true);
+  };
