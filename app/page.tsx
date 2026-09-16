@@ -169,3 +169,7 @@ export default function Home() {
       setResult(data);
     } catch (err) {
       setSearchError((err as Error).message);
+    } finally {
+      setSearching(false);
+    }
+  };
