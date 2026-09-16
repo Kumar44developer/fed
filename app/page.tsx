@@ -201,3 +201,5 @@ export default function Home() {
 
   const openVideo = (v: Video) => {
     setPlaying(v);
+    fetch("/api/history", {
+      method: "POST",
