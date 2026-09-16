@@ -179,3 +179,8 @@ export default function Home() {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
+        username: p.username,
+        full_name: p.fullName,
+        profile_pic: p.profilePicUrl,
+      }),
+    });
