@@ -277,3 +277,6 @@ export default function Home() {
     setAddToPlaylist(null);
     await loadMeta();
   };
+
+  const clearHistory = async () => {
+    await fetch("/api/history", { method: "DELETE" });
