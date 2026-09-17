@@ -257,3 +257,6 @@ export default function Home() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ name: name.trim() }),
     });
+    await loadMeta();
+    setSideTab("playlists");
+  };
