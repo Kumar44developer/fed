@@ -247,3 +247,8 @@ export default function Home() {
     await loadMeta();
     if (view.kind === "section" && view.id === id) go({ kind: "all" });
   };
+
+
+  const createPlaylist = async () => {
+    const name = prompt("Playlist name:");
+    if (!name?.trim()) return;
