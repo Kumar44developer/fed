@@ -271,3 +271,6 @@ export default function Home() {
   const addVideoToPlaylist = async (playlistId: number, video: Video) => {
     await fetch("/api/playlists", {
       method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ playlist_id: playlistId, video_id: video.id }),
+    });
