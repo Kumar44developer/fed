@@ -280,3 +280,5 @@ export default function Home() {
 
   const clearHistory = async () => {
     await fetch("/api/history", { method: "DELETE" });
+    if (view.kind === "history") setVideos([]);
+  };
