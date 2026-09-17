@@ -264,3 +264,6 @@ export default function Home() {
 
   const deletePlaylist = async (id: number) => {
     await fetch(`/api/playlists?id=${id}`, { method: "DELETE" });
+    await loadMeta();
+    if (view.kind === "playlist" && view.id === id) go({ kind: "all" });
+  };
