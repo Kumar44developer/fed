@@ -260,3 +260,7 @@ export default function Home() {
     await loadMeta();
     setSideTab("playlists");
   };
+
+
+  const deletePlaylist = async (id: number) => {
+    await fetch(`/api/playlists?id=${id}`, { method: "DELETE" });
