@@ -241,3 +241,6 @@ export default function Home() {
     setNewSectionMembers([]);
     await loadMeta();
   };
+
+  const deleteSection = async (id: number) => {
+    await fetch(`/api/sections?id=${id}`, { method: "DELETE" });
