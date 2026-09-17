@@ -282,3 +282,6 @@ export default function Home() {
     await fetch("/api/history", { method: "DELETE" });
     if (view.kind === "history") setVideos([]);
   };
+
+  const subOf = (username: string) => subs.find((s) => s.username === username);
+
