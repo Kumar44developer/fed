@@ -274,3 +274,6 @@ export default function Home() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ playlist_id: playlistId, video_id: video.id }),
     });
+    setAddToPlaylist(null);
+    await loadMeta();
+  };
