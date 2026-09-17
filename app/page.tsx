@@ -252,3 +252,6 @@ export default function Home() {
   const createPlaylist = async () => {
     const name = prompt("Playlist name:");
     if (!name?.trim()) return;
+    await fetch("/api/playlists", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
