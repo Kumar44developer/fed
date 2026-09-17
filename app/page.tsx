@@ -244,3 +244,6 @@ export default function Home() {
 
   const deleteSection = async (id: number) => {
     await fetch(`/api/sections?id=${id}`, { method: "DELETE" });
+    await loadMeta();
+    if (view.kind === "section" && view.id === id) go({ kind: "all" });
+  };
