@@ -267,3 +267,7 @@ export default function Home() {
     await loadMeta();
     if (view.kind === "playlist" && view.id === id) go({ kind: "all" });
   };
+
+  const addVideoToPlaylist = async (playlistId: number, video: Video) => {
+    await fetch("/api/playlists", {
+      method: "POST",
