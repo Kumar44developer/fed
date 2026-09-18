@@ -333,3 +333,6 @@ export default function Home() {
               setEditSection({ id: -1, name: "", usernames: [] });
             }}
           >
+            + New Section
+          </button>
+          <button className="pill purple" onClick={createPlaylist}>
