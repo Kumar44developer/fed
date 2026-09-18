@@ -309,3 +309,6 @@ export default function Home() {
         <div className="brand">
           <div className="brand-icon">▶</div>
           <div>
+            <div className="brand-name">InstaFeed</div>
+            <div className="brand-tag">YOUR FEED, YOUR RULES</div>
+          </div>
