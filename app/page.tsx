@@ -296,3 +296,8 @@ export default function Home() {
       case "user":
         return subOf(view.username)?.full_name || `@${view.username}`;
       case "section":
+       return sections.find((s) => s.id === view.id)?.name || "Section";
+      case "playlist":
+        return playlists.find((p) => p.id === view.id)?.name || "Playlist";
+    }
+  }
