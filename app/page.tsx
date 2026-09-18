@@ -319,3 +319,6 @@ export default function Home() {
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search an Instagram username"
           />
+          <button type="submit" disabled={searching}>
+            {searching ? "…" : "🔍"}
+          </button>
