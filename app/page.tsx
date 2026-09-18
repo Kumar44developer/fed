@@ -325,3 +325,6 @@ export default function Home() {
         </form>
         <div className="top-actions">
           <button
+            className="pill"
+            onClick={() => {
+              setEditSection(null);
