@@ -322,3 +322,6 @@ export default function Home() {
           <button type="submit" disabled={searching}>
             {searching ? "…" : "🔍"}
           </button>
+        </form>
+        <div className="top-actions">
+          <button
