@@ -336,3 +336,5 @@ export default function Home() {
             + New Section
           </button>
           <button className="pill purple" onClick={createPlaylist}>
+            🎵 + New Playlist
+          </button>
