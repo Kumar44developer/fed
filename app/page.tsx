@@ -285,3 +285,6 @@ export default function Home() {
 
   const subOf = (username: string) => subs.find((s) => s.username === username);
 
+  const viewTitle = () => {
+    switch (view.kind) {
+      case "all":
