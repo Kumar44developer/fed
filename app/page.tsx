@@ -290,3 +290,5 @@ export default function Home() {
       case "all":
         return "All";
       case "pinned":
+        return `📌 Pinned (${pins.length})`;
+      case "history":
