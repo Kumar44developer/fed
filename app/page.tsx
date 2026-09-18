@@ -328,3 +328,8 @@ export default function Home() {
             className="pill"
             onClick={() => {
               setEditSection(null);
+              setNewSectionName("");
+              setNewSectionMembers([]);
+              setEditSection({ id: -1, name: "", usernames: [] });
+            }}
+          >
