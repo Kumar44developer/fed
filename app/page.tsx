@@ -314,3 +314,8 @@ export default function Home() {
           </div>
         </div>
         <form onSubmit={search} className="topsearch">
+          <input
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search an Instagram username"
+          />
