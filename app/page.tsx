@@ -288,3 +288,5 @@ export default function Home() {
   const viewTitle = () => {
     switch (view.kind) {
       case "all":
+        return "All";
+      case "pinned":
