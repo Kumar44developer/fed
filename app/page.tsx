@@ -312,3 +312,5 @@ export default function Home() {
             <div className="brand-name">InstaFeed</div>
             <div className="brand-tag">YOUR FEED, YOUR RULES</div>
           </div>
+        </div>
+        <form onSubmit={search} className="topsearch">
