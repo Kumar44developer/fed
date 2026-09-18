@@ -307,3 +307,5 @@ export default function Home() {
     <div className="app">
       <header className="topbar">
         <div className="brand">
+          <div className="brand-icon">▶</div>
+          <div>
