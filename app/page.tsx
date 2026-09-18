@@ -301,3 +301,9 @@ export default function Home() {
         return playlists.find((p) => p.id === view.id)?.name || "Playlist";
     }
   }
+
+
+  return (
+    <div className="app">
+      <header className="topbar">
+        <div className="brand">
