@@ -294,3 +294,5 @@ export default function Home() {
       case "history":
         return "History";
       case "user":
+        return subOf(view.username)?.full_name || `@${view.username}`;
+      case "section":
