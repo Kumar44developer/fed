@@ -385,3 +385,6 @@ export default function Home() {
             className={sideTab === "subs" ? "on" : ""}
             onClick={() => setSideTab("subs")}
           >
+            Sections
+          </button>
+          <button
