@@ -388,3 +388,6 @@ export default function Home() {
             Sections
           </button>
           <button
+            className={sideTab === "playlists" ? "on" : ""}
+            onClick={() => setSideTab("playlists")}
+          >
