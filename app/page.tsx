@@ -338,3 +338,6 @@ export default function Home() {
           <button className="pill purple" onClick={createPlaylist}>
             🎵 + New Playlist
           </button>
+          <button className="pill" onClick={() => go({ kind: "history" })}>
+            🕘 History
+          </button>
