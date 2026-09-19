@@ -343,3 +343,5 @@ export default function Home() {
           </button>
           <button
             className="pill"
+            onClick={() => {
+              setSideTab("playlists");
