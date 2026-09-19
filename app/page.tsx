@@ -402,3 +402,6 @@ export default function Home() {
           All
         </button>
         <button
+          className={`chip ${view.kind === "pinned" ? "active" : ""}`}
+          onClick={() => go({ kind: "pinned" })}
+        >
