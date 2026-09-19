@@ -358,3 +358,6 @@ export default function Home() {
       {(result || searchError) && (
         <div className="search-result-bar">
           {searchError && <span className="error">{searchError}</span>}
+          {result && (
+            <>
+              {result.profilePicUrl && <img src={proxied(result.profilePicUrl)} alt="" />}
