@@ -366,3 +366,5 @@ export default function Home() {
               {result.followersCount ? (
                 <span className="muted">{result.followersCount.toLocaleString()} followers</span>
               ) : null}
+              {subOf(result.username) ? (
+                <button className="pill" disabled>Subscribed</button>
