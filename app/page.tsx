@@ -394,3 +394,7 @@ export default function Home() {
             Playlists
           </button>
         </div>
+        <button
+          className={`chip ${view.kind === "all" ? "active" : ""}`}
+          onClick={() => go({ kind: "all" })}
+        >
