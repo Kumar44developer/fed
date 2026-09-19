@@ -373,3 +373,8 @@ export default function Home() {
                   + Subscribe
                 </button>
               )}
+              <button className="pill" onClick={() => setResult(null)}>✕</button>
+            </>
+          )}
+        </div>
+      )}
