@@ -353,3 +353,8 @@ export default function Home() {
           </button>
         </div>
       </header>
+
+
+      {(result || searchError) && (
+        <div className="search-result-bar">
+          {searchError && <span className="error">{searchError}</span>}
