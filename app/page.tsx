@@ -341,3 +341,5 @@ export default function Home() {
           <button className="pill" onClick={() => go({ kind: "history" })}>
             🕘 History
           </button>
+          <button
+            className="pill"
