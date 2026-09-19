@@ -363,3 +363,6 @@ export default function Home() {
               {result.profilePicUrl && <img src={proxied(result.profilePicUrl)} alt="" />}
               <strong>@{result.username}</strong>
               <span className="muted">{result.fullName}</span>
+              {result.followersCount ? (
+                <span className="muted">{result.followersCount.toLocaleString()} followers</span>
+              ) : null}
