@@ -348,3 +348,8 @@ export default function Home() {
               if (playlists.length) go({ kind: "playlist", id: playlists[0].id });
             }}
           >
+
+            👁 View Playlists
+          </button>
+        </div>
+      </header>
