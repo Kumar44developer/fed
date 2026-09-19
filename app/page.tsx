@@ -345,3 +345,6 @@ export default function Home() {
             className="pill"
             onClick={() => {
               setSideTab("playlists");
+              if (playlists.length) go({ kind: "playlist", id: playlists[0].id });
+            }}
+          >
