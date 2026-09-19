@@ -368,3 +368,8 @@ export default function Home() {
               ) : null}
               {subOf(result.username) ? (
                 <button className="pill" disabled>Subscribed</button>
+              ) : (
+                <button className="pill accent" onClick={() => subscribe(result)}>
+                  + Subscribe
+                </button>
+              )}
