@@ -361,3 +361,5 @@ export default function Home() {
           {result && (
             <>
               {result.profilePicUrl && <img src={proxied(result.profilePicUrl)} alt="" />}
+              <strong>@{result.username}</strong>
+              <span className="muted">{result.fullName}</span>
