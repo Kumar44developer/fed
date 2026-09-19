@@ -382,3 +382,6 @@ export default function Home() {
       <div className="chipbar">
         <div className="side-toggle">
           <button
+            className={sideTab === "subs" ? "on" : ""}
+            onClick={() => setSideTab("subs")}
+          >
