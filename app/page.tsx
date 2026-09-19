@@ -378,3 +378,7 @@ export default function Home() {
           )}
         </div>
       )}
+
+      <div className="chipbar">
+        <div className="side-toggle">
+          <button
