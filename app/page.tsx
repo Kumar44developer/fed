@@ -398,3 +398,7 @@ export default function Home() {
           className={`chip ${view.kind === "all" ? "active" : ""}`}
           onClick={() => go({ kind: "all" })}
         >
+
+          All
+        </button>
+        <button
