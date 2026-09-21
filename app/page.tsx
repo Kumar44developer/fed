@@ -468,3 +468,7 @@ export default function Home() {
               <ul>
                 {playlists.map((p) => (
                   <li
+                    key={p.id}
+                    className={view.kind === "playlist" && view.id === p.id ? "active" : ""}
+                    onClick={() => go({ kind: "playlist", id: p.id })}
+                  >
