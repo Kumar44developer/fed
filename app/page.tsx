@@ -431,3 +431,6 @@ export default function Home() {
              <h2>Subscriptions</h2>
               {subs.length === 0 && <p className="muted">Search a username above to subscribe.</p>}
               <ul>
+                {subs.map((s) => (
+                  <li
+                    key={s.username}
