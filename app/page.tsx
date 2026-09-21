@@ -440,3 +440,8 @@ export default function Home() {
                     className={view.kind === "user" && view.username === s.username ? "active" : ""}
                     onClick={() => go({ kind: "user", username: s.username })}
                   >
+                 {s.profile_pic ? (
+                      <img src={proxied(s.profile_pic)} alt="" />
+                    ) : (
+                      <div className="avatar-ph" />
+                    )}
