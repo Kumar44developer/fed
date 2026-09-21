@@ -465,3 +465,6 @@ export default function Home() {
               {playlists.length === 0 && (
                 <p className="muted">No playlists yet. Use “+ New Playlist”.</p>
               )}
+              <ul>
+                {playlists.map((p) => (
+                  <li
