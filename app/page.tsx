@@ -434,3 +434,6 @@ export default function Home() {
                 {subs.map((s) => (
                   <li
                     key={s.username}
+                {subs.map((s) => (
+                  <li
+                    key={s.username}
