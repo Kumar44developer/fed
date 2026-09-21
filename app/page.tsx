@@ -453,3 +453,7 @@ export default function Home() {
                         unsubscribe(s.username);
                       }}
                     >
+                      ✕
+                    </button>
+                  </li>
+                ))}
