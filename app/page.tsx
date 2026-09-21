@@ -461,3 +461,7 @@ export default function Home() {
             </>
           ) : (
             <>
+              <h2>Playlists</h2>
+              {playlists.length === 0 && (
+                <p className="muted">No playlists yet. Use “+ New Playlist”.</p>
+              )}
