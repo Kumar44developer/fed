@@ -416,3 +416,6 @@ export default function Home() {
             onDoubleClick={() => {
               setEditSection(s);
               setNewSectionName(s.name);
+          setNewSectionMembers(s.usernames);
+            }}
+          >
