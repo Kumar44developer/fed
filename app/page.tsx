@@ -428,3 +428,6 @@ export default function Home() {
         <aside className="sidebar">
           {sideTab === "subs" ? (
             <>
+             <h2>Subscriptions</h2>
+              {subs.length === 0 && <p className="muted">Search a username above to subscribe.</p>}
+              <ul>
