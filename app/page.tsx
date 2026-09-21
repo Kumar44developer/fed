@@ -419,3 +419,8 @@ export default function Home() {
           setNewSectionMembers(s.usernames);
             }}
           >
+
+            {s.name}
+          </button>
+        ))}
+      </div>
