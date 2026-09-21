@@ -408,3 +408,5 @@ export default function Home() {
 
           📌 Pinned ({pins.length})
         </button>
+        {sections.map((s) => (
+          <button
