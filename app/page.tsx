@@ -437,3 +437,6 @@ export default function Home() {
                 {subs.map((s) => (
                   <li
                     key={s.username}
+                    className={view.kind === "user" && view.username === s.username ? "active" : ""}
+                    onClick={() => go({ kind: "user", username: s.username })}
+                  >
