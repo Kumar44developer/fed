@@ -410,3 +410,6 @@ export default function Home() {
         </button>
         {sections.map((s) => (
           <button
+         key={s.id}
+            className={`chip ${view.kind === "section" && view.id === s.id ? "active" : ""}`}
+            onClick={() => go({ kind: "section", id: s.id })}
