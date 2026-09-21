@@ -445,3 +445,5 @@ export default function Home() {
                     ) : (
                       <div className="avatar-ph" />
                     )}
+                    <span className="sub-name">{s.full_name || s.username}</span>
+                    <button
