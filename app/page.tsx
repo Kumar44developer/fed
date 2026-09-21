@@ -424,3 +424,5 @@ export default function Home() {
           </button>
         ))}
       </div>
+    <div className="body">
+        <aside className="sidebar">
