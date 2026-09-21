@@ -413,3 +413,6 @@ export default function Home() {
          key={s.id}
             className={`chip ${view.kind === "section" && view.id === s.id ? "active" : ""}`}
             onClick={() => go({ kind: "section", id: s.id })}
+            onDoubleClick={() => {
+              setEditSection(s);
+              setNewSectionName(s.name);
