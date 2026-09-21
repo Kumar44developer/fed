@@ -447,3 +447,9 @@ export default function Home() {
                     )}
                     <span className="sub-name">{s.full_name || s.username}</span>
                     <button
+                      className="remove"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        unsubscribe(s.username);
+                      }}
+                    >
