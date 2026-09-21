@@ -472,3 +472,6 @@ export default function Home() {
                     className={view.kind === "playlist" && view.id === p.id ? "active" : ""}
                     onClick={() => go({ kind: "playlist", id: p.id })}
                   >
+                    <div className="avatar-ph playlist-ic">🎵</div>
+                    <span className="sub-name">
+                      {p.name} <span className="muted">({p.videos.length})</span>
