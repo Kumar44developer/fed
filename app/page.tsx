@@ -531,3 +531,6 @@ export default function Home() {
           {!loading && videos.length === 0 && !error && (
             <div className="empty">Nothing here yet.</div>
           )}
+          <div className="grid">
+            {videos.map((v) => {
+              const s = subOf(v.username);
