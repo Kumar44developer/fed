@@ -507,3 +507,10 @@ export default function Home() {
                   className="pill"
                   onClick={() => {
                     const s = sections.find((x) => view.kind === "section" && x.id === view.id);
+                    if (s) {
+                      setEditSection(s);
+                      setNewSectionName(s.name);
+                      setNewSectionMembers(s.usernames);
+                    }
+                  }}
+                >
