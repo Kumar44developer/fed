@@ -526,3 +526,5 @@ export default function Home() {
               </button>
             </div>
           </div>
+          {loading && <div className="empty">Loading feed…</div>}
+          {error && <p className="error">{error}</p>}
