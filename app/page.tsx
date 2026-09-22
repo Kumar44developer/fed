@@ -502,3 +502,6 @@ export default function Home() {
                   Clear history
                 </button>
               )}
+              {view.kind === "section" && (
+                <button
+                  className="pill"
