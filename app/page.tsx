@@ -475,3 +475,6 @@ export default function Home() {
                     <div className="avatar-ph playlist-ic">🎵</div>
                     <span className="sub-name">
                       {p.name} <span className="muted">({p.videos.length})</span>
+                    </span>
+                    <button
+                      className="remove"
