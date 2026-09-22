@@ -539,3 +539,5 @@ export default function Home() {
               return (
                 <div key={v.id} className="card">
                   <div className="thumb" onClick={() => openVideo(v)}>
+                    <img src={proxied(v.thumbnail_url)} alt="" loading="lazy" />
+                    <span className="play-badge">▶</span>
