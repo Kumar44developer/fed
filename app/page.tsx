@@ -505,3 +505,5 @@ export default function Home() {
               {view.kind === "section" && (
                 <button
                   className="pill"
+                  onClick={() => {
+                    const s = sections.find((x) => view.kind === "section" && x.id === view.id);
