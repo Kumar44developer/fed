@@ -534,3 +534,5 @@ export default function Home() {
           <div className="grid">
             {videos.map((v) => {
               const s = subOf(v.username);
+              const pic = v.profile_pic || s?.profile_pic || "";
+              const name = v.full_name || s?.full_name || v.username;
