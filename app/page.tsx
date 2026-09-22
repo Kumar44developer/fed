@@ -514,3 +514,6 @@ export default function Home() {
                     }
                   }}
                 >
+                  Edit section
+                </button>
+              )}
