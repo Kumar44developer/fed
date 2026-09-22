@@ -562,3 +562,6 @@ export default function Home() {
                       <div className="video-title" onClick={() => openVideo(v)}>
                        {title(v.caption)}
                       </div>
+                      <div className="muted">{name}</div>
+                      <div className="muted">{timeAgo(v.timestamp)}</div>
+                    </div>
