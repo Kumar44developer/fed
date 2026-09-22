@@ -522,3 +522,7 @@ export default function Home() {
                 onClick={() => loadView(view, view.kind === "user")}
                 disabled={loading}
               >
+                ⟳ Refresh
+              </button>
+            </div>
+          </div>
