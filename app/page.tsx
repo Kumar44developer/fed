@@ -552,3 +552,6 @@ export default function Home() {
                       📌
                     </button>
                   </div>
+                  <div className="meta">
+                    {pic ? (
+                      <img className="avatar" src={proxied(pic)} alt="" />
