@@ -558,3 +558,5 @@ export default function Home() {
                     ) : (
                       <div className="avatar avatar-ph" />
                     )}
+                   <div className="meta-text">
+                      <div className="video-title" onClick={() => openVideo(v)}>
