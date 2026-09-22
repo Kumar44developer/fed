@@ -491,3 +491,8 @@ export default function Home() {
             </>
           )}
         </aside>
+
+
+        <main className="feed">
+          <div className="feed-head">
+            <h1 className="feed-title">{viewTitle()}</h1>
