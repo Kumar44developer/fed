@@ -478,3 +478,8 @@ export default function Home() {
                     </span>
                     <button
                       className="remove"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        deletePlaylist(p.id);
+                      }}
+                    >
