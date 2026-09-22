@@ -549,3 +549,6 @@ export default function Home() {
                         togglePin(v);
                       }}
                     >
+                      📌
+                    </button>
+                  </div>
