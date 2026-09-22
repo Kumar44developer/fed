@@ -555,3 +555,6 @@ export default function Home() {
                   <div className="meta">
                     {pic ? (
                       <img className="avatar" src={proxied(pic)} alt="" />
+                    ) : (
+                      <div className="avatar avatar-ph" />
+                    )}
