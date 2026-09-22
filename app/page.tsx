@@ -541,3 +541,6 @@ export default function Home() {
                   <div className="thumb" onClick={() => openVideo(v)}>
                     <img src={proxied(v.thumbnail_url)} alt="" loading="lazy" />
                     <span className="play-badge">▶</span>
+                    <button
+                      className={`pin-btn ${isPinned(v.id) ? "pinned" : ""}`}
+                      title={isPinned(v.id) ? "Unpin" : "Pin"}
