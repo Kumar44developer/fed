@@ -528,3 +528,6 @@ export default function Home() {
           </div>
           {loading && <div className="empty">Loading feed…</div>}
           {error && <p className="error">{error}</p>}
+          {!loading && videos.length === 0 && !error && (
+            <div className="empty">Nothing here yet.</div>
+          )}
