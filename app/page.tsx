@@ -565,3 +565,5 @@ export default function Home() {
                       <div className="muted">{name}</div>
                       <div className="muted">{timeAgo(v.timestamp)}</div>
                     </div>
+                  </div>
+                  <button className="pill small" onClick={() => setAddToPlaylist(v)}>
