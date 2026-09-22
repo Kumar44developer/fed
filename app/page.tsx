@@ -544,3 +544,8 @@ export default function Home() {
                     <button
                       className={`pin-btn ${isPinned(v.id) ? "pinned" : ""}`}
                       title={isPinned(v.id) ? "Unpin" : "Pin"}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        togglePin(v);
+                      }}
+                    >
