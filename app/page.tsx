@@ -483,3 +483,7 @@ export default function Home() {
                         deletePlaylist(p.id);
                       }}
                     >
+                      ✕
+                    </button>
+                  </li>
+                ))}
