@@ -519,3 +519,6 @@ export default function Home() {
               )}
               <button
                 className="pill"
+                onClick={() => loadView(view, view.kind === "user")}
+                disabled={loading}
+              >
