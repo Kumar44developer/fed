@@ -560,3 +560,5 @@ export default function Home() {
                     )}
                    <div className="meta-text">
                       <div className="video-title" onClick={() => openVideo(v)}>
+                       {title(v.caption)}
+                      </div>
