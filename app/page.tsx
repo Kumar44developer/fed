@@ -499,3 +499,6 @@ export default function Home() {
             <div className="feed-head-actions">
               {view.kind === "history" && videos.length > 0 && (
                 <button className="pill" onClick={clearHistory}>
+                  Clear history
+                </button>
+              )}
