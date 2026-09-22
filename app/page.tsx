@@ -517,3 +517,5 @@ export default function Home() {
                   Edit section
                 </button>
               )}
+              <button
+                className="pill"
