@@ -601,3 +601,6 @@ export default function Home() {
                 View on Instagram →
               </a>
             </div>
+          </div>
+        </div>
+      )}
