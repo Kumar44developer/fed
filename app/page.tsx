@@ -614,3 +614,6 @@ export default function Home() {
             {playlists.length === 0 && (
               <p className="muted">No playlists yet — create one first with “+ New Playlist”.</p>
             )}
+            <ul className="pick-list">
+              {playlists.map((p) => (
+                <li key={p.id} onClick={() => addVideoToPlaylist(p.id, addToPlaylist)}>
