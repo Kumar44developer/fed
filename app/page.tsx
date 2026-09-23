@@ -621,3 +621,7 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+           <button className="pill" onClick={createPlaylist}>+ New Playlist</button>
+          </div>
+        </div>
+      )}
