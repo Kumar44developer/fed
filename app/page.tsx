@@ -597,3 +597,7 @@ export default function Home() {
               <div className="muted">
                 @{playing.username} · {timeAgo(playing.timestamp)}
               </div>
+              <a href={playing.post_url} target="_blank" rel="noreferrer">
+                View on Instagram →
+              </a>
+            </div>
