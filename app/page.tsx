@@ -581,3 +581,6 @@ export default function Home() {
         <div className="modal" onClick={() => setPlaying(null)}>
           <div className="modal-inner" onClick={(e) => e.stopPropagation()}>
             <button className="modal-close" onClick={() => setPlaying(null)}>✕</button>
+            <video
+              src={proxied(playing.video_url)}
+              poster={proxied(playing.thumbnail_url)}
