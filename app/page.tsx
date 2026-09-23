@@ -609,3 +609,5 @@ export default function Home() {
       {addToPlaylist && (
         <div className="modal" onClick={() => setAddToPlaylist(null)}>
           <div className="modal-inner small-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setAddToPlaylist(null)}>✕</button>
+            <h3>Add to playlist</h3>
