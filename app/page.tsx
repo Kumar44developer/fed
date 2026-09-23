@@ -567,3 +567,7 @@ export default function Home() {
                     </div>
                   </div>
                   <button className="pill small" onClick={() => setAddToPlaylist(v)}>
+                    🎵 Playlist
+                  </button>
+                </div>
+              );
