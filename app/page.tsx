@@ -594,3 +594,6 @@ export default function Home() {
             />
             <div className="modal-meta">
               <div className="video-title">{title(playing.caption)}</div>
+              <div className="muted">
+                @{playing.username} · {timeAgo(playing.timestamp)}
+              </div>
