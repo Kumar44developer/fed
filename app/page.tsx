@@ -587,3 +587,8 @@ export default function Home() {
               controls
               autoPlay
               loop
+              playsInline
+              controlsList="nodownload noplaybackrate"
+              disablePictureInPicture
+              onContextMenu={(e) => e.preventDefault()}
+            />
