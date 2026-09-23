@@ -584,3 +584,6 @@ export default function Home() {
             <video
               src={proxied(playing.video_url)}
               poster={proxied(playing.thumbnail_url)}
+              controls
+              autoPlay
+              loop
