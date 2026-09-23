@@ -617,3 +617,7 @@ export default function Home() {
             <ul className="pick-list">
               {playlists.map((p) => (
                 <li key={p.id} onClick={() => addVideoToPlaylist(p.id, addToPlaylist)}>
+                  🎵 {p.name} <span className="muted">({p.videos.length})</span>
+                </li>
+              ))}
+            </ul>
