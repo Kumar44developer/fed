@@ -592,3 +592,5 @@ export default function Home() {
               disablePictureInPicture
               onContextMenu={(e) => e.preventDefault()}
             />
+            <div className="modal-meta">
+              <div className="video-title">{title(playing.caption)}</div>
