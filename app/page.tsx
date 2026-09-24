@@ -664,3 +664,8 @@ export default function Home() {
                   Delete section
                 </button>
               )}
+              )}
+            </div>
+          </div>
+        </div>
+      )}
