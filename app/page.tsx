@@ -639,3 +639,6 @@ export default function Home() {
             />
             <p className="muted">Pick accounts for this section:</p>
             <ul className="pick-list">
+              {subs.map((s) => (
+                <li
+                  key={s.username}
