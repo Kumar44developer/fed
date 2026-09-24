@@ -637,3 +637,5 @@ export default function Home() {
               value={newSectionName}
               onChange={(e) => setNewSectionName(e.target.value)}
             />
+            <p className="muted">Pick accounts for this section:</p>
+            <ul className="pick-list">
