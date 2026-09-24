@@ -655,3 +655,7 @@ export default function Home() {
                 </li>
               ))}
             </ul>
+            <div className="row">
+              <button className="pill accent" onClick={createSection}>
+                Save
+              </button>
