@@ -645,3 +645,9 @@ export default function Home() {
                   className={newSectionMembers.includes(s.username) ? "picked" : ""}
                   onClick={() =>
                     setNewSectionMembers((m) =>
+                      m.includes(s.username)
+                        ? m.filter((x) => x !== s.username)
+                        : [...m, s.username]
+                    )
+                  }
+                >
