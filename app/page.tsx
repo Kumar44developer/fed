@@ -632,3 +632,6 @@ export default function Home() {
             <button className="modal-close" onClick={() => setEditSection(null)}>✕</button>
             <h3>{editSection.id === -1 ? "New Section" : "Edit Section"}</h3>
             <input
+              className="text-input"
+              placeholder="Section name (e.g. AI CREATORS)"
+              value={newSectionName}
