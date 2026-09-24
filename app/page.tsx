@@ -659,3 +659,8 @@ export default function Home() {
               <button className="pill accent" onClick={createSection}>
                 Save
               </button>
+              {editSection.id !== -1 && (
+                <button className="pill" onClick={() => deleteSection(editSection.id)}>
+                  Delete section
+                </button>
+              )}
