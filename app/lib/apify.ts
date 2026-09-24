@@ -15,3 +15,5 @@ export interface IgProfile {
 export interface IgVideo {
   id: string;
   caption: string;
+  videoUrl: string;
+  thumbnailUrl: string;
