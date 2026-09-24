@@ -629,3 +629,6 @@ export default function Home() {
       {editSection && (
         <div className="modal" onClick={() => setEditSection(null)}>
           <div className="modal-inner small-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setEditSection(null)}>✕</button>
+            <h3>{editSection.id === -1 ? "New Section" : "Edit Section"}</h3>
+            <input
