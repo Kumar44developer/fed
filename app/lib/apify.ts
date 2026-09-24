@@ -10,3 +10,8 @@ export interface IgProfile {
   followersCount?: number;
   biography?: string;
 }
+
+
+export interface IgVideo {
+  id: string;
+  caption: string;
