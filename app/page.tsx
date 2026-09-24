@@ -651,3 +651,7 @@ export default function Home() {
                     )
                   }
                 >
+                  {newSectionMembers.includes(s.username) ? "✅" : "⬜"} {s.full_name || s.username}
+                </li>
+              ))}
+            </ul>
