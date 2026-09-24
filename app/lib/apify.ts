@@ -22,3 +22,8 @@ export interface IgVideo {
 }
 
 const USERNAME_RE = /^[A-Za-z0-9._]{1,30}$/;
+
+
+export function isValidUsername(u: string): boolean {
+  return USERNAME_RE.test(u);
+}
