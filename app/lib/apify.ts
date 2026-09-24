@@ -17,3 +17,6 @@ export interface IgVideo {
   caption: string;
   videoUrl: string;
   thumbnailUrl: string;
+  postUrl: string;
+  timestamp: string;
+}
