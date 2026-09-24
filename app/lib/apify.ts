@@ -20,3 +20,5 @@ export interface IgVideo {
   postUrl: string;
   timestamp: string;
 }
+
+const USERNAME_RE = /^[A-Za-z0-9._]{1,30}$/;
