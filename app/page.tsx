@@ -635,3 +635,5 @@ export default function Home() {
               className="text-input"
               placeholder="Section name (e.g. AI CREATORS)"
               value={newSectionName}
+              onChange={(e) => setNewSectionName(e.target.value)}
+            />
