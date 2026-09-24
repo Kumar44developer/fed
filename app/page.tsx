@@ -625,3 +625,7 @@ export default function Home() {
           </div>
         </div>
       )}
+
+      {editSection && (
+        <div className="modal" onClick={() => setEditSection(null)}>
+          <div className="modal-inner small-modal" onClick={(e) => e.stopPropagation()}>
