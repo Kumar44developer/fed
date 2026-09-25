@@ -15,3 +15,6 @@ db.exec(`
   CREATE TABLE IF NOT EXISTS videos (
     id TEXT PRIMARY KEY,
     username TEXT NOT NULL,
+    caption TEXT,
+    video_url TEXT,
+    thumbnail_url TEXT,
