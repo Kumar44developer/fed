@@ -48,3 +48,5 @@ export async function fetchVideos(username: string): Promise<IgVideo[]> {
   return (items as Record<string, unknown>[])
     .filter((p) => p.videoUrl)
     .map((p) => ({
+      id: String(p.id ?? p.shortCode),
+      caption: String(p.caption ?? ""),
