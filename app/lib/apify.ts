@@ -44,3 +44,5 @@ export async function fetchVideos(username: string): Promise<IgVideo[]> {
     username: [username],
     resultsLimit: 30,
   });
+  const { items } = await client.dataset(run.defaultDatasetId).listItems();
+  return (items as Record<string, unknown>[])
