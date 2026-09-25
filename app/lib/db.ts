@@ -35,3 +35,6 @@ db.exec(`
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT UNIQUE NOT NULL
   );
+  CREATE TABLE IF NOT EXISTS playlist_items (
+    playlist_id INTEGER NOT NULL,
+    video_id TEXT NOT NULL,
