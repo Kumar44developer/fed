@@ -38,3 +38,5 @@ export function isValidUsername(u: string): boolean {
     biography: String(p.biography ?? ""),
   };
 }
+
+export async function fetchVideos(username: string): Promise<IgVideo[]> {
