@@ -34,3 +34,7 @@ export function isValidUsername(u: string): boolean {
     username: String(p.username),
     fullName: String(p.fullName ?? ""),
     profilePicUrl: String(p.profilePicUrlHD ?? p.profilePicUrl ?? ""),
+    followersCount: Number(p.followersCount ?? 0),
+    biography: String(p.biography ?? ""),
+  };
+}
