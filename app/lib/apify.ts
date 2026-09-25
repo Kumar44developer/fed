@@ -27,3 +27,5 @@ const USERNAME_RE = /^[A-Za-z0-9._]{1,30}$/;
 export function isValidUsername(u: string): boolean {
   return USERNAME_RE.test(u);
 }
+  const { items } = await client.dataset(run.defaultDatasetId).listItems();
+  if (!items.length) return null;
