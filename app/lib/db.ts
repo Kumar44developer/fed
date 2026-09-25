@@ -11,3 +11,7 @@ db.exec(`
     profile_pic TEXT,
     created_at TEXT DEFAULT (datetime('now'))
   );
+
+  CREATE TABLE IF NOT EXISTS videos (
+    id TEXT PRIMARY KEY,
+    username TEXT NOT NULL,
