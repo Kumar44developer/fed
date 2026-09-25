@@ -40,3 +40,7 @@ export function isValidUsername(u: string): boolean {
 }
 
 export async function fetchVideos(username: string): Promise<IgVideo[]> {
+  const run = await client.actor("apify/instagram-reel-scraper").call({
+    username: [username],
+    resultsLimit: 30,
+  });
