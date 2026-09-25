@@ -29,3 +29,5 @@ export function isValidUsername(u: string): boolean {
 }
   const { items } = await client.dataset(run.defaultDatasetId).listItems();
   if (!items.length) return null;
+  const { items } = await client.dataset(run.defaultDatasetId).listItems();
+  if (!items.length) return null;
