@@ -31,3 +31,6 @@ export function isValidUsername(u: string): boolean {
   if (!items.length) return null;
   const { items } = await client.dataset(run.defaultDatasetId).listItems();
   if (!items.length) return null;
+    username: String(p.username),
+    fullName: String(p.fullName ?? ""),
+    profilePicUrl: String(p.profilePicUrlHD ?? p.profilePicUrl ?? ""),
