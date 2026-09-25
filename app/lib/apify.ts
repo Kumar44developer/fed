@@ -46,3 +46,5 @@ export async function fetchVideos(username: string): Promise<IgVideo[]> {
   });
   const { items } = await client.dataset(run.defaultDatasetId).listItems();
   return (items as Record<string, unknown>[])
+    .filter((p) => p.videoUrl)
+    .map((p) => ({
