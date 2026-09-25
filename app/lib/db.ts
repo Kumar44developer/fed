@@ -29,3 +29,5 @@ db.exec(`
   CREATE TABLE IF NOT EXISTS section_members (
     section_id INTEGER NOT NULL,
     username TEXT NOT NULL,
+    PRIMARY KEY (section_id, username)
+  );
