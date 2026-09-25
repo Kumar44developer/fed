@@ -50,3 +50,5 @@ export async function fetchVideos(username: string): Promise<IgVideo[]> {
     .map((p) => ({
       id: String(p.id ?? p.shortCode),
       caption: String(p.caption ?? ""),
+      videoUrl: String(p.videoUrl ?? ""),
+      thumbnailUrl: String(p.displayUrl ?? p.thumbnailUrl ?? ""),
