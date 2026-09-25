@@ -26,3 +26,6 @@ db.exec(`
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT UNIQUE NOT NULL
   );
+  CREATE TABLE IF NOT EXISTS section_members (
+    section_id INTEGER NOT NULL,
+    username TEXT NOT NULL,
