@@ -52,3 +52,7 @@ export async function fetchVideos(username: string): Promise<IgVideo[]> {
       caption: String(p.caption ?? ""),
       videoUrl: String(p.videoUrl ?? ""),
       thumbnailUrl: String(p.displayUrl ?? p.thumbnailUrl ?? ""),
+      postUrl: String(p.url ?? `https://www.instagram.com/p/${p.shortCode}/`),
+      timestamp: String(p.timestamp ?? ""),
+    }));
+}
