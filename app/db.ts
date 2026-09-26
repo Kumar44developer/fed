@@ -46,3 +46,5 @@ db.exec(`
     added_at TEXT DEFAULT (datetime('now')),
     PRIMARY KEY (playlist_id, video_id)
   );
+  CREATE TABLE IF NOT EXISTS history (
+    video_id TEXT PRIMARY KEY,
