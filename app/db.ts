@@ -48,3 +48,5 @@ db.exec(`
   );
   CREATE TABLE IF NOT EXISTS history (
     video_id TEXT PRIMARY KEY,
+    watched_at TEXT DEFAULT (datetime('now'))
+  );
