@@ -43,3 +43,6 @@ db.exec(`
   CREATE TABLE IF NOT EXISTS playlist_items (
     playlist_id INTEGER NOT NULL,
     video_id TEXT NOT NULL,
+    added_at TEXT DEFAULT (datetime('now')),
+    PRIMARY KEY (playlist_id, video_id)
+  );
