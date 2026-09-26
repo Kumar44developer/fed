@@ -55,3 +55,5 @@ db.exec(`
     pinned_at TEXT DEFAULT (datetime('now'))
   );
 `);
+
+export default db;
