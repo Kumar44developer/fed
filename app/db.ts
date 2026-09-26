@@ -52,3 +52,6 @@ db.exec(`
   );
   CREATE TABLE IF NOT EXISTS pins (
     video_id TEXT PRIMARY KEY,
+    pinned_at TEXT DEFAULT (datetime('now'))
+  );
+`);
