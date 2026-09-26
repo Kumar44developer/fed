@@ -34,3 +34,8 @@ db.exec(`
     username TEXT NOT NULL,
     PRIMARY KEY (section_id, username)
   );
+
+  CREATE TABLE IF NOT EXISTS playlists (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT UNIQUE NOT NULL
+  );
