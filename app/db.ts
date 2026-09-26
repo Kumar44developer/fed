@@ -19,3 +19,7 @@ db.exec(`
     caption TEXT,
     video_url TEXT,
     thumbnail_url TEXT,
+    post_url TEXT,
+    timestamp TEXT,
+    fetched_at TEXT DEFAULT (datetime('now'))
+  );
