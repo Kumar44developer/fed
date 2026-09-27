@@ -10,3 +10,5 @@ export async function middleware(req: NextRequest) {
   const supabase = createServerClient(url, key, {
     cookies: {
       getAll: () => req.cookies.getAll(),
+      setAll: (cookiesToSet) => {
+        cookiesToSet.forEach(({ name, value, options }) =>
