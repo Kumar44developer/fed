@@ -29,3 +29,5 @@ const POLL_MS = 3 * 60 * 1000;
 
   const g = globalThis as { __instafeedPoller?: NodeJS.Timeout };
   if (!g.__instafeedPoller) {
+    g.__instafeedPoller = setInterval(poll, POLL_MS);
+    setTimeout(poll, 15_000);
