@@ -17,3 +17,7 @@ export async function middleware(req: NextRequest) {
       },
     },
   });
+
+
+  const {
+    data: { user },
