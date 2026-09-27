@@ -4,3 +4,8 @@ export async function register() {
   const { fetchVideos } = await import("./lib/apify");
 
 const POLL_MS = 3 * 60 * 1000;
+
+  const poll = async () => {
+    const subs = db.prepare("SELECT username FROM subscriptions").all() as {
+      username: string;
+    }[];
