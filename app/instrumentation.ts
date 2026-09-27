@@ -20,3 +20,5 @@ const POLL_MS = 3 * 60 * 1000;
           for (const v of videos)
             insert.run(v.id, username, v.caption, v.videoUrl, v.thumbnailUrl, v.postUrl, v.timestamp);
         });
+        tx();
+      } catch (e) {
