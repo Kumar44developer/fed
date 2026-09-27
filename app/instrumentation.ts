@@ -13,3 +13,6 @@ const POLL_MS = 3 * 60 * 1000;
       try {
         const videos = await fetchVideos(username);
         const insert = db.prepare(
+          `INSERT OR REPLACE INTO videos (id, username, caption, video_url, thumbnail_url, post_url, timestamp)
+           VALUES (?, ?, ?, ?, ?, ?, ?)`
+        );
