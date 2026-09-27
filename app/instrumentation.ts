@@ -9,3 +9,5 @@ const POLL_MS = 3 * 60 * 1000;
     const subs = db.prepare("SELECT username FROM subscriptions").all() as {
       username: string;
     }[];
+    for (const { username } of subs) {
+      try {
