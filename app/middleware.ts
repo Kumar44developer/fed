@@ -37,3 +37,5 @@ export async function middleware(req: NextRequest) {
     to.pathname = "/";
     return NextResponse.redirect(to);
   }
+  return res;
+}
