@@ -16,3 +16,7 @@ const POLL_MS = 3 * 60 * 1000;
           `INSERT OR REPLACE INTO videos (id, username, caption, video_url, thumbnail_url, post_url, timestamp)
            VALUES (?, ?, ?, ?, ?, ?, ?)`
         );
+        const tx = db.transaction(() => {
+          for (const v of videos)
+            insert.run(v.id, username, v.caption, v.videoUrl, v.thumbnailUrl, v.postUrl, v.timestamp);
+        });
