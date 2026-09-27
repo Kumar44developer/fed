@@ -11,3 +11,5 @@ const POLL_MS = 3 * 60 * 1000;
     }[];
     for (const { username } of subs) {
       try {
+        const videos = await fetchVideos(username);
+        const insert = db.prepare(
