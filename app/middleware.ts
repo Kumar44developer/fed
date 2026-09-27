@@ -22,3 +22,6 @@ export async function middleware(req: NextRequest) {
   const {
     data: { user },
   } = await supabase.auth.getUser();
+
+  const isLogin = req.nextUrl.pathname.startsWith("/login");
+  const isProxy = req.nextUrl.pathname.startsWith("/api/proxy");
