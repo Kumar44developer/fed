@@ -26,3 +26,6 @@ const POLL_MS = 3 * 60 * 1000;
       }
     }
   };
+
+  const g = globalThis as { __instafeedPoller?: NodeJS.Timeout };
+  if (!g.__instafeedPoller) {
