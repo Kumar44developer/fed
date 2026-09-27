@@ -31,3 +31,6 @@ const POLL_MS = 3 * 60 * 1000;
   if (!g.__instafeedPoller) {
     g.__instafeedPoller = setInterval(poll, POLL_MS);
     setTimeout(poll, 15_000);
+    console.log("[poller] background Instagram poller started (every 3 min)");
+  }
+}
