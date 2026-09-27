@@ -29,3 +29,6 @@ export async function middleware(req: NextRequest) {
 
   if (!user && !isLogin && !isProxy) {
     const to = req.nextUrl.clone();
+    to.pathname = "/login";
+    return NextResponse.redirect(to);
+  }
