@@ -25,3 +25,7 @@ export async function middleware(req: NextRequest) {
 
   const isLogin = req.nextUrl.pathname.startsWith("/login");
   const isProxy = req.nextUrl.pathname.startsWith("/api/proxy");
+
+
+  if (!user && !isLogin && !isProxy) {
+    const to = req.nextUrl.clone();
