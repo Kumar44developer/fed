@@ -22,3 +22,7 @@ const POLL_MS = 3 * 60 * 1000;
         });
         tx();
       } catch (e) {
+        console.error(`[poller] ${username}:`, (e as Error).message);
+      }
+    }
+  };
