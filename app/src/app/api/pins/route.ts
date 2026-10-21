@@ -1,14 +1,26 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
+import db from "@/lib/db";
+import { listPins, pinVideo, unpinVideo } from "@/lib/pins";
+import { parseVideoId } from "@/lib/video-id";
 
-// Placeholder: the previous file was a copy of the history route and wrote
-// pins into the history table. The real implementation lands in a follow-up PR.
-// GET returns an empty list so the UI keeps working in the meantime.
 export async function GET() {
-  return NextResponse.json([]);
+  return NextResponse.json(listPins(db));
 }
 
-const notImplemented = () =>
-  NextResponse.json({ error: "Pins are not implemented yet" }, { status: 501 });
+export async function POST(req: NextRequest) {
+  const body = await req.json().catch(() => null);
+  const videoId = parseVideoId(body?.video_id);
+  if (!videoId) return NextResponse.json({ error: "video_id required" }, { status: 400 });
 
-export const POST = notImplemented;
-export const DELETE = notImplemented;
+  const result = pinVideo(db, videoId);
+  if (result === "video_not_found")
+    return NextResponse.json({ error: "video not found" }, { status: 404 });
+  return NextResponse.json({ ok: true, pinned: true }, { status: result === "pinned" ? 201 : 200 });
+}
+
+export async function DELETE(req: NextRequest) {
+  const videoId = parseVideoId(req.nextUrl.searchParams.get("video_id"));
+  if (!videoId) return NextResponse.json({ error: "video_id required" }, { status: 400 });
+  const removed = unpinVideo(db, videoId);
+  return NextResponse.json({ ok: true, removed });
+}

@@ -166,7 +166,7 @@ npm start
 | `GET` | `/api/videos?username=<name>[&refresh=1]` | Videos for one account (cached or fresh) |
 | `GET/POST/DELETE` | `/api/sections` | Manage sections: `{ id?, name, usernames[] }` / `?id=` |
 | `GET/POST/DELETE` | `/api/playlists` | Manage playlists and playlist items |
-| `GET/POST/DELETE` | `/api/pins` | Manage pinned videos: `{ video_id }` |
+| `GET/POST/DELETE` | `/api/pins` | Pinned videos: POST `{ video_id }` (201 new, 200 already pinned, 404 unknown video), DELETE `?video_id=` |
 | `GET/POST/DELETE` | `/api/history` | Watch history: `{ video_id }`, DELETE clears all |
 | `GET` | `/api/proxy?url=<cdn-url>` | Stream Instagram CDN media (range requests supported) |
 
