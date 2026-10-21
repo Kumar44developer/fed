@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# local data
+*.db
+*.db-shm
+*.db-wal
+
+# env files
+.env
+.env*.local
+
+# logs / OS
+npm-debug.log*
+.DS_Store
+coverage/

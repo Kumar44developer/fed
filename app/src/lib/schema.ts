@@ -1,0 +1,62 @@
+import type Database from "better-sqlite3";
+
+/**
+ * Creates every table InstaFeed needs. Safe to run on every start-up:
+ * all statements use `IF NOT EXISTS`.
+ */
+export function initSchema(db: Database.Database): void {
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS subscriptions (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      username TEXT UNIQUE NOT NULL,
+      full_name TEXT,
+      profile_pic TEXT,
+      created_at TEXT DEFAULT (datetime('now'))
+    );
+
+    CREATE TABLE IF NOT EXISTS videos (
+      id TEXT PRIMARY KEY,
+      username TEXT NOT NULL,
+      caption TEXT,
+      video_url TEXT,
+      thumbnail_url TEXT,
+      post_url TEXT,
+      timestamp TEXT,
+      fetched_at TEXT DEFAULT (datetime('now'))
+    );
+    CREATE INDEX IF NOT EXISTS idx_videos_username_ts ON videos (username, timestamp DESC);
+
+    CREATE TABLE IF NOT EXISTS sections (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      name TEXT UNIQUE NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS section_members (
+      section_id INTEGER NOT NULL,
+      username TEXT NOT NULL,
+      PRIMARY KEY (section_id, username)
+    );
+
+    CREATE TABLE IF NOT EXISTS playlists (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      name TEXT UNIQUE NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS playlist_items (
+      playlist_id INTEGER NOT NULL,
+      video_id TEXT NOT NULL,
+      added_at TEXT DEFAULT (datetime('now')),
+      PRIMARY KEY (playlist_id, video_id)
+    );
+
+    CREATE TABLE IF NOT EXISTS history (
+      video_id TEXT PRIMARY KEY,
+      watched_at TEXT DEFAULT (datetime('now'))
+    );
+
+    CREATE TABLE IF NOT EXISTS pins (
+      video_id TEXT PRIMARY KEY,
+      pinned_at TEXT DEFAULT (datetime('now'))
+    );
+  `);
+}

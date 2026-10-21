@@ -17,7 +17,7 @@ InstaFeed is a self-hosted [Next.js](https://nextjs.org) app. You search for pub
 - 🕘 **Watch history**: automatically tracks what you've watched (clearable).
 - 🔄 **Background polling**: a server-side job fetches new videos for every subscription every 3 minutes.
 - 🛡️ **Media proxy**: streams Instagram CDN media through the app (with HTTP range support for seeking), restricted to `cdninstagram.com` / `fbcdn.net`.
-- 🔐 **Authentication**: email + password sign-up/sign-in via Supabase. Every page except `/login` is protected by middleware.
+- 🔐 **Authentication**: email + password sign-up/sign-in via Supabase. Every page except `/login` is protected by an auth guard (`src/proxy.ts`).
 
 ## 🧱 Tech Stack
 
@@ -47,36 +47,40 @@ InstaFeed is a self-hosted [Next.js](https://nextjs.org) app. You search for pub
 1. **Search**: `/api/search` calls the Apify profile scraper to resolve a username.
 2. **Subscribe**: the profile is saved to the `subscriptions` table.
 3. **Fetch videos**: `/api/videos` returns cached reels or fetches fresh ones (up to 30) from Apify.
-4. **Poll**: `instrumentation.ts` registers a Node.js interval that refreshes all subscriptions every 3 minutes.
+4. **Poll**: `src/instrumentation.ts` registers a Node.js interval that refreshes all subscriptions every 3 minutes.
 5. **Watch**: the client plays media through `/api/proxy` to get around Instagram CDN hotlinking restrictions.
 
 ## 📁 Project Structure
 
 ```
 fed/
-└── app/
-    ├── layout.tsx           # Root layout & metadata
-    ├── page.tsx             # Main client UI (feed, sidebar, player)
-    ├── page.module.css
-    ├── globals.css
-    ├── login/
-    │   └── Page.tsx         # Supabase email/password login & sign-up
-    ├── middleware.ts        # Auth guard (redirects to /login)
-    ├── instrumentation.ts   # Background Instagram poller
-    ├── lib/
-    │   ├── db.ts            # SQLite connection + schema
-    │   └── apify.ts         # Apify client: searchProfile / fetchVideos
-    ├── api/
-    │   ├── feed/            # GET  combined feed
-    │   ├── search/          # GET  look up a profile
-    │   ├── subscriptions/   # GET/POST/DELETE subscriptions
-    │   ├── videos/          # GET  videos for a user (?refresh=1)
-    │   ├── sections/        # GET/POST/DELETE sections
-    │   ├── playlists/       # GET/POST/DELETE playlists & items
-    │   ├── pins/            # GET/POST/DELETE pinned videos
-    │   ├── history/         # GET/POST/DELETE watch history
-    │   └── proxy/           # GET  Instagram CDN media proxy
-    ├── next.config.ts
+└── app/                       # Next.js project root (run npm commands here)
+    ├── src/
+    │   ├── app/
+    │   │   ├── layout.tsx     # Root layout & metadata
+    │   │   ├── page.tsx       # Main client UI (feed, sidebar, player)
+    │   │   ├── globals.css
+    │   │   ├── login/page.tsx # Supabase email/password login & sign-up
+    │   │   └── api/
+    │   │       ├── feed/          # GET  combined feed
+    │   │       ├── search/        # GET  look up a profile
+    │   │       ├── subscriptions/ # GET/POST/DELETE subscriptions
+    │   │       ├── videos/        # GET  videos for a user (?refresh=1)
+    │   │       ├── sections/      # GET/POST/DELETE sections
+    │   │       ├── playlists/     # GET/POST/DELETE playlists & items
+    │   │       ├── pins/          # GET/POST/DELETE pinned videos
+    │   │       ├── history/       # GET/POST/DELETE watch history
+    │   │       └── proxy/         # GET  Instagram CDN media proxy
+    │   ├── lib/
+    │   │   ├── db.ts          # SQLite connection
+    │   │   ├── schema.ts      # Table definitions
+    │   │   ├── apify.ts       # Apify client: searchProfile / fetchVideos
+    │   │   └── supabase/client.ts
+    │   ├── proxy.ts           # Auth guard (Next.js 16 "proxy", formerly middleware)
+    │   └── instrumentation.ts # Background Instagram poller
+    ├── .env.example
+    ├── vitest.config.ts
+    ├── tsconfig.json
     └── package.json
 ```
 
@@ -97,7 +101,7 @@ The SQLite database (`instafeed.db`) is created automatically on first run:
 
 ### Prerequisites
 
-- **Node.js 20+** and npm
+- **Node.js 22+** and npm
 - An **[Apify](https://console.apify.com/)** account and API token
 - A **[Supabase](https://supabase.com/)** project with Email auth enabled
 
@@ -113,7 +117,7 @@ npm install
 
 ### 2. Configure environment variables
 
-Create `app/.env.local`:
+Copy `app/.env.example` to `app/.env.local` and fill it in:
 
 ```env
 # Apify: used to scrape Instagram profiles and reels
@@ -124,7 +128,7 @@ NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
 ```
 
-> If the Supabase variables are not set, the middleware skips the auth check.
+> If the Supabase variables are not set, the auth guard is skipped.
 
 ### 3. Run the development server
 
@@ -133,6 +137,13 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000), create an account, search for an Instagram username, and subscribe.
+
+### Tests and type checking
+
+```bash
+npm test           # Vitest unit + route-handler tests (in-memory SQLite)
+npm run typecheck  # next typegen && tsc --noEmit
+```
 
 ### Production build
 
@@ -163,10 +174,10 @@ npm start
 
 | Setting | Location | Default |
 |---------|----------|---------|
-| Background poll interval | `app/instrumentation.ts` (`POLL_MS`) | 3 minutes |
-| Client feed refresh | `app/page.tsx` | 30 seconds |
-| Reels fetched per account | `app/lib/apify.ts` (`resultsLimit`) | 30 |
-| Database file | `app/lib/db.ts` | `./instafeed.db` |
+| Background poll interval | `app/src/instrumentation.ts` (`POLL_MS`) | 3 minutes |
+| Client feed refresh | `app/src/app/page.tsx` | 30 seconds |
+| Reels fetched per account | `app/src/lib/apify.ts` (`resultsLimit`) | 30 |
+| Database file | `INSTAFEED_DB_PATH` env var | `./instafeed.db` |
 
 ## ⚠️ Disclaimer
 
