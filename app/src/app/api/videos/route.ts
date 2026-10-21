@@ -1,37 +1,28 @@
 import { NextRequest, NextResponse } from "next/server";
 import db from "@/lib/db";
-import { fetchVideos, isValidUsername } from "@/lib/apify";
+import { isValidUsername } from "@/lib/apify";
+import { ingestor } from "@/lib/ingestor";
+import { listVideos } from "@/lib/video-ingestion";
 
+/**
+ * GET ?username=          -> cached videos (fetched from Instagram on first request)
+ * GET ?username=&refresh=1 -> fetch fresh videos, falling back to the cache on failure
+ */
 export async function GET(req: NextRequest) {
   const username = req.nextUrl.searchParams.get("username");
   const refresh = req.nextUrl.searchParams.get("refresh") === "1";
   if (!username || !isValidUsername(username))
     return NextResponse.json({ error: "valid username required" }, { status: 400 });
 
-
-  const cached = db
-    .prepare("SELECT * FROM videos WHERE username = ? ORDER BY timestamp DESC")
-    .all(username);
-
+  const cached = listVideos(db, username);
   if (cached.length && !refresh) return NextResponse.json(cached);
 
   try {
-    const videos = await fetchVideos(username);
-    const insert = db.prepare(
-      `INSERT OR REPLACE INTO videos (id, username, caption, video_url, thumbnail_url, post_url, timestamp)
-       VALUES (?, ?, ?, ?, ?, ?, ?)`
-    );
-    const tx = db.transaction(() => {
-      for (const v of videos)
-        insert.run(v.id, username, v.caption, v.videoUrl, v.thumbnailUrl, v.postUrl, v.timestamp);
-    });
-    tx();
-    const rows = db
-      .prepare("SELECT * FROM videos WHERE username = ? ORDER BY timestamp DESC")
-      .all(username);
-    return NextResponse.json(rows);
+    await ingestor.refresh(username);
+    return NextResponse.json(listVideos(db, username));
   } catch (e) {
-    if (cached.length) return NextResponse.json(cached);
-    return NextResponse.json({ error: (e as Error).message }, { status: 500 });
+    console.error(`[videos] refresh ${username}:`, (e as Error).message);
+    if (cached.length) return NextResponse.json(cached, { headers: { "x-instafeed-stale": "1" } });
+    return NextResponse.json({ error: "could not fetch videos, try again later" }, { status: 502 });
   }
 }
